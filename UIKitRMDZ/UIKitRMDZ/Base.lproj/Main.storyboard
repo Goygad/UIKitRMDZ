@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIKitRMDZ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="UIKitRMDZ" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,7 +115,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9OU-QY-FxK"/>
                     <connections>
-                        <outlet property="enterButton" destination="3CR-CA-gee" id="lcB-hr-Oei"/>
+                        <outlet property="enterButton" destination="3CR-CA-gee" id="j67-LN-MYH"/>
                         <outlet property="passwordTextField" destination="022-sh-xdB" id="vN0-yS-TAt"/>
                     </connections>
                 </viewController>
@@ -429,7 +429,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RMd-dS-ZY4"/>
+        <segue reference="CPQ-Aw-Kkf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Email" width="297" height="34"/>

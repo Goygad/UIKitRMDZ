@@ -3,10 +3,11 @@
 
 import UIKit
 
+/// Класс подводящий итог и подсчет
 final class CheckViewController: UIViewController {
-    // MARK: - Public methods
+    // MARK: - Private methods
 
-    @IBAction func goToGratitude(_ sender: Any) {
+    @IBAction private func goToGratitude(_ sender: Any) {
         let alertCheck = UIAlertController(title: "Вы хотите оплатить чек?", message: "", preferredStyle: .alert)
         alertCheck.addAction(UIAlertAction(title: "Отмена", style: .cancel))
         alertCheck.addAction(UIAlertAction(title: "Да", style: .default, handler: { [self] _ in

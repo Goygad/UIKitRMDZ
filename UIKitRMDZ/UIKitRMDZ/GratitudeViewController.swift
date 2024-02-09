@@ -3,4 +3,5 @@
 
 import UIKit
 
+/// Показывает благодарность
 final class GratitudeViewController: UIViewController {}

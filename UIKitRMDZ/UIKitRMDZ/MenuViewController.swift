@@ -3,10 +3,13 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+/// Класс показывающий выбор настроек
+final class MenuViewController: UIViewController {
+    // MARK: - Private Properties
+
     let checkController = CheckViewController()
 
-    // MARK: - Methods
+    // MARK: - IBAction
 
     @IBAction func goToCheck(_ sender: Any) {
         let alertCheck = UIAlertController(title: "Выставить счет?", message: "", preferredStyle: .alert)
