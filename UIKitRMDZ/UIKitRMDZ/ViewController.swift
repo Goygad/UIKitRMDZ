@@ -3,6 +3,7 @@
 
 import UIKit
 
+/// Экран где есть кнопка начать и результаты игры
 final class MainViewController: UIViewController {
     // MARK: - Private Properties
 
@@ -98,7 +99,7 @@ final class MainViewController: UIViewController {
         convertorAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
             self.enteredText = convertorAlert.textFields?.first?.text ?? "Error"
 
-            let reversedTxt = self.convertor.reversedText(text: self.enteredText)
+            let reversedTxt = self.convertor.addReversedText(text: self.enteredText)
             self.reversedEnteredWord.text = reversedTxt
             self.createLabelEnteredWord()
             self.changePositionButton()
