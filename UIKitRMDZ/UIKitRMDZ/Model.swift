@@ -4,7 +4,7 @@
 import Foundation
 import UIKit
 
-class Model {
+final class Convertor {
     // MARK: - Public Methods
 
     func reversedText(text: String) -> String {
