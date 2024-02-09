@@ -3,6 +3,7 @@
 
 import UIKit
 
+/// Главный экран с кнопками игр
 final class MainViewController: UIViewController {
     // MARK: - Private Properties
 
