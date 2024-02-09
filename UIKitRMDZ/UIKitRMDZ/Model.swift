@@ -5,7 +5,8 @@ import Foundation
 import UIKit
 
 class Model {
-//    var revTxt = String()
+    // MARK: - Public Methods
+
     func reversedText(text: String) -> String {
         let txt = text.reversed()
         return String(txt)
