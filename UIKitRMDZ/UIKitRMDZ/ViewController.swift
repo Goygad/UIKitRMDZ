@@ -173,9 +173,9 @@ final class MainViewController: UIViewController {
         alertView.addAction(UIAlertAction(title: "Сложить", style: .default) { _ in
             let numberOne = alertView.textFields?.first?.text
             let numberTwo = alertView.textFields?.last?.text
-            let num1 = Int(numberOne ?? "")
-            let num2 = Int(numberTwo ?? "")
-            self.sum = (num1 ?? 0) + (num2 ?? 0)
+            let enteredNumberOne = Int(numberOne ?? "")
+            let enteredNumberTwo = Int(numberTwo ?? "")
+            self.sum = (enteredNumberOne ?? 0) + (enteredNumberTwo ?? 0)
             self.addResultSumInAlert()
         })
         alertView.addTextField()
