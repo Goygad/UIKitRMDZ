@@ -1,7 +1,6 @@
 // Convertor.swift
 // Copyright © RoadMap. All rights reserved.
 
-import Foundation
 import UIKit
 
 /// Модель с логикой выполнения игры
