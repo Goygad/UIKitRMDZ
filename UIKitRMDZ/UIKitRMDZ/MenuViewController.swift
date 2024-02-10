@@ -11,7 +11,7 @@ final class MenuViewController: UIViewController {
 
     // MARK: - IBAction
 
-    @IBAction func goToCheck(_ sender: Any) {
+    @IBAction private func goToCheck(_ sender: Any) {
         let alertCheck = UIAlertController(title: "Выставить счет?", message: "", preferredStyle: .alert)
         alertCheck.addAction(UIAlertAction(title: "Отмена", style: .cancel))
         alertCheck.addAction(UIAlertAction(title: "Чек", style: .default, handler: { [self] _ in

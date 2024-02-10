@@ -115,7 +115,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="9OU-QY-FxK"/>
                     <connections>
-                        <outlet property="enterButton" destination="3CR-CA-gee" id="j67-LN-MYH"/>
                         <outlet property="passwordTextField" destination="022-sh-xdB" id="vN0-yS-TAt"/>
                     </connections>
                 </viewController>
