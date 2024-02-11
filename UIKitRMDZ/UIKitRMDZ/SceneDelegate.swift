@@ -10,7 +10,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
-    ) {}
+    ) {
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        let navigationVC = UINavigationController()
+        let loginVC = LoginViewController()
+        window = .init(windowScene: windowScene)
+        window?.rootViewController = navigationVC
+        navigationVC.pushViewController(loginVC, animated: true)
+        window?.makeKeyAndVisible()
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {}
 
