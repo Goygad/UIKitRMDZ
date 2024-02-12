@@ -12,6 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+
         let navigationVC = UINavigationController()
         let loginVC = LoginViewController()
         window = .init(windowScene: windowScene)

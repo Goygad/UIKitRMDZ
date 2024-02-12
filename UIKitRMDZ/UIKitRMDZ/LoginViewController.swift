@@ -27,7 +27,7 @@ final class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        setView()
         createMainView()
         createPieImageView()
         createApplicationNameLabel()
@@ -47,6 +47,10 @@ final class LoginViewController: UIViewController {
     }
 
     // MARK: - Private Methods
+
+    private func setView() {
+        view.backgroundColor = .white
+    }
 
     private func createMainView() {
         mainView.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)

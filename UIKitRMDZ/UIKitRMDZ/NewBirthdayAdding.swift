@@ -2,7 +2,8 @@
 // Copyright © RoadMap. All rights reserved.
 
 import UIKit
-///Экран добавления нового ДР
+
+/// Экран добавления нового ДР
 final class NewBirthdayAdding: UIViewController {
     // MARK: - Private Properties
 
@@ -143,7 +144,7 @@ final class NewBirthdayAdding: UIViewController {
         let textField = UITextField()
         textField.attributedPlaceholder = .init(string: "Typing Telegram")
         textField.frame = CGRect(x: 20, y: 566, width: 175, height: 17)
-        textField.addTarget(self, action: #selector(alertTelegram), for: .editingDidBegin)
+        textField.addTarget(self, action: #selector(addAlertTelegram), for: .editingDidBegin)
         return textField
     }()
 
@@ -176,14 +177,18 @@ final class NewBirthdayAdding: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        setView()
         addUI()
-        singingProtocols()
+        signingProtocols()
         createDoneToolBarButton()
         setDatePicker()
     }
 
     // MARK: - Private Methods
+
+    private func setView() {
+        view.backgroundColor = .white
+    }
 
     private func setDatePicker() {
         birthdayTextField.inputView = datePickerView
@@ -211,7 +216,7 @@ final class NewBirthdayAdding: UIViewController {
         genderTextField.inputAccessoryView = toolBar
     }
 
-    private func singingProtocols() {
+    private func signingProtocols() {
         agePickerView.delegate = self
         agePickerView.dataSource = self
         ageTextField.inputView = agePickerView
@@ -242,7 +247,7 @@ final class NewBirthdayAdding: UIViewController {
         view.addSubview(telegramUnderView)
     }
 
-    @objc func alertTelegram() {
+    @objc private func addAlertTelegram() {
         let alertController = UIAlertController(title: "Please enter Telegram", message: nil, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         alertController.addAction(UIAlertAction(title: "OK", style: .default) { _ in
@@ -254,17 +259,17 @@ final class NewBirthdayAdding: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
 
-    @objc func handleDatePicker(sender: UIDatePicker) {
+    @objc private func handleDatePicker(sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM yyyy"
         birthdayTextField.text = dateFormatter.string(from: sender.date)
     }
 
-    @objc func addCancelButton() {
+    @objc private func addCancelButton() {
         dismiss(animated: true)
     }
 
-    @objc func clickDoneButton() {
+    @objc private func clickDoneButton() {
         view.endEditing(true)
     }
 }

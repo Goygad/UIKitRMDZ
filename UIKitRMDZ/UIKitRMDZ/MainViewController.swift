@@ -2,6 +2,7 @@
 // Copyright © RoadMap. All rights reserved.
 
 import UIKit
+
 /// Главный экран приложения
 final class MainViewController: UIViewController {
     // MARK: - Private Properties
@@ -30,7 +31,7 @@ final class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        setView()
         createMainName()
         createHelena()
         createVerona()
@@ -41,6 +42,10 @@ final class MainViewController: UIViewController {
     }
 
     // MARK: - Private Methods
+
+    private func setView() {
+        view.backgroundColor = .white
+    }
 
     private func createMainName() {
         mainNameLabel.text = "Birthday Reminder"
