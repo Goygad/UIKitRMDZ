@@ -5,7 +5,7 @@ import AVFoundation
 import UIKit
 
 /// Плеер
-class PlayerController: UIViewController {
+final class PlayerController: UIViewController {
     // MARK: - Public Properties
 
     var trackIndex = 0
@@ -19,11 +19,11 @@ class PlayerController: UIViewController {
 
     // MARK: - IBOutlets
 
-    @IBOutlet var durationSlider: UISlider!
-    @IBOutlet var volumeSlider: UISlider!
-    @IBOutlet var playStopButton: UIButton!
-    @IBOutlet var trackName: UILabel!
-    @IBOutlet var trackImage: UIImageView!
+    @IBOutlet private var durationSlider: UISlider!
+    @IBOutlet private var volumeSlider: UISlider!
+    @IBOutlet private var playStopButton: UIButton!
+    @IBOutlet private var trackName: UILabel!
+    @IBOutlet private var trackImage: UIImageView!
 
     // MARK: - Life Cycle
 
@@ -68,11 +68,11 @@ class PlayerController: UIViewController {
 
     // MARK: - IBAction
 
-    @IBAction func cancelButton(_ sender: Any) {
+    @IBAction func addCancelButton(_ sender: Any) {
         dismiss(animated: true)
     }
 
-    @IBAction func playStopMusic(_ sender: Any) {
+    @IBAction private func playStopMusic(_ sender: Any) {
         if playStopButton.currentImage == UIImage(named: "playButton") {
             playStopButton.setImage(UIImage(named: "stopButton"), for: .normal)
             player.play()
@@ -82,7 +82,7 @@ class PlayerController: UIViewController {
         }
     }
 
-    @IBAction func backTrack(_ sender: Any) {
+    @IBAction private func backTrack(_ sender: Any) {
         if trackIndex != 0 {
             trackIndex -= 1
             trackName.text = nameTracks[trackIndex]
@@ -96,7 +96,7 @@ class PlayerController: UIViewController {
         }
     }
 
-    @IBAction func nextTrack(_ sender: Any) {
+    @IBAction private func nextTrack(_ sender: Any) {
         if trackIndex < (tracks.count - 1) {
             trackIndex += 1
             trackName.text = nameTracks[trackIndex]
