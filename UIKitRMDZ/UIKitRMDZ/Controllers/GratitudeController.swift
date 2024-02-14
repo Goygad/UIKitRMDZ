@@ -6,23 +6,28 @@ import UIKit
 /// Класс с благодарностью
 
 final class GratitudeController: UIViewController {
-    // MARK: - Private properties
+    // MARK: - Constants
+    private enum ConstantStrings: String {
+        case good = "Хорошо"
+        
+    }
+    // MARK: - Visual
 
-    private var topImage: UIImageView = {
+    private let graphicPatternImageView: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 92, y: 58, width: 200, height: 86)
         image.image = UIImage(named: "imageGratitudeVC")
         return image
     }()
 
-    private var gratitudeImage: UIImageView = {
+    private let gratitudeImageView: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 75, y: 184, width: 235, height: 128)
         image.image = UIImage(named: "thanks")
         return image
     }()
 
-    private var promoLabel: UILabel = {
+    private let promoLabel: UILabel = {
         let label = UILabel()
         label.text =
             """
@@ -40,15 +45,15 @@ final class GratitudeController: UIViewController {
     private lazy var goodButton: UIButton = {
         let button = UIButton()
         button.frame = CGRect(x: 20, y: 632, width: 335, height: 44)
-        button.setTitle("Хорошо", for: .normal)
+        button.setTitle(ConstantStrings.good.rawValue, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
         button.backgroundColor = UIColor(named: "newButtonColor")
         button.layer.cornerRadius = 12
-        button.addTarget(self, action: #selector(addVCPresent), for: .touchUpInside)
+        button.addTarget(self, action: #selector(popToRootViewController), for: .touchUpInside)
         return button
     }()
 
-    private var loginButtonImage: UIImageView = {
+    private let loginButtonImage: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 252, y: 2, width: 45, height: 45)
         image.image = UIImage(named: "bean")
@@ -59,21 +64,21 @@ final class GratitudeController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        setupUI()
     }
 
     // MARK: - Private methods
 
-    private func setUI() {
+    private func setupUI() {
         view.backgroundColor = .white
-        view.addSubview(topImage)
-        view.addSubview(gratitudeImage)
+        view.addSubview(graphicPatternImageView)
+        view.addSubview(gratitudeImageView)
         view.addSubview(promoLabel)
         view.addSubview(goodButton)
         goodButton.addSubview(loginButtonImage)
     }
 
-    @objc private func addVCPresent() {
+    @objc private func popToRootViewController() {
         navigationController?.popToRootViewController(animated: true)
     }
 }

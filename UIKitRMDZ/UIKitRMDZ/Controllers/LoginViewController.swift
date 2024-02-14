@@ -21,7 +21,7 @@ final class LoginViewController: UIViewController {
 
     // MARK: - Visual
 
-    private var appNameLabel: UILabel = {
+    private let appNameLabel: UILabel = {
         let label = UILabel()
         label.text = ConstantStrings.appName.rawValue
         label.frame = CGRect(x: 100, y: 103, width: 175, height: 75)
@@ -39,7 +39,7 @@ final class LoginViewController: UIViewController {
         return viewBack
     }()
 
-    private var autorizationLabel: UILabel = {
+    private let autorizationLabel: UILabel = {
         let label = UILabel()
         label.text = ConstantStrings.autorization.rawValue
         label.frame = CGRect(x: 20, y: 32, width: 195, height: 31)
@@ -48,7 +48,7 @@ final class LoginViewController: UIViewController {
         return label
     }()
 
-    private var loginLabel: UILabel = {
+    private let loginLabel: UILabel = {
         let label = UILabel()
         label.text = ConstantStrings.login.rawValue
         label.frame = CGRect(x: 20, y: 84, width: 175, height: 19)
@@ -57,7 +57,7 @@ final class LoginViewController: UIViewController {
         return label
     }()
 
-    private var passwordLabel: UILabel = {
+    private let passwordLabel: UILabel = {
         let label = UILabel()
         label.text = ConstantStrings.password.rawValue
         label.frame = CGRect(x: 20, y: 159, width: 195, height: 19)
@@ -66,7 +66,7 @@ final class LoginViewController: UIViewController {
         return label
     }()
 
-    private var loginTextField: UITextField = {
+    private let loginTextField: UITextField = {
         let textField = UITextField()
         textField.frame = CGRect(x: 20, y: 113, width: 195, height: 19)
         textField.placeholder = ConstantStrings.loginPlaceholder.rawValue
@@ -81,14 +81,14 @@ final class LoginViewController: UIViewController {
         return textField
     }()
 
-    private var loginUnderView: UIView = {
+    private let loginUnderView: UIView = {
         let view = UIView()
         view.frame = CGRect(x: 20, y: 138, width: 335, height: 1)
         view.backgroundColor = .systemGray4
         return view
     }()
 
-    private var passwordUnderView: UIView = {
+    private let passwordUnderView: UIView = {
         let view = UIView()
         view.frame = CGRect(x: 20, y: 214, width: 335, height: 1)
         view.backgroundColor = .systemGray4
@@ -116,7 +116,7 @@ final class LoginViewController: UIViewController {
         return button
     }()
 
-    private var loginButtonImage: UIImageView = {
+    private let loginButtonImageView: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 252, y: 2, width: 45, height: 45)
         image.image = UIImage(named: "bean")
@@ -157,7 +157,7 @@ final class LoginViewController: UIViewController {
         backgroundMainView.addSubview(eyeButton)
         backgroundMainView.addSubview(loginButton)
 
-        loginButton.addSubview(loginButtonImage)
+        loginButton.addSubview(loginButtonImageView)
     }
 
     @objc private func changePasswordField() {
@@ -166,7 +166,7 @@ final class LoginViewController: UIViewController {
     }
 
     @objc private func addVCPresent() {
-        let menu = MenuController()
+        let menu = MenuViewController()
         let navController = UINavigationController(rootViewController: menu)
         navController.modalPresentationStyle = .fullScreen
         present(navController, animated: true)

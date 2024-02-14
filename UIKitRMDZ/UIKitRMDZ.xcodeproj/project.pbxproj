@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52B78EBE2B7CA2A40045A3FD /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B78EBD2B7CA2A40045A3FD /* MenuController.swift */; };
+		52B78EBE2B7CA2A40045A3FD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B78EBD2B7CA2A40045A3FD /* MenuViewController.swift */; };
 		52B78EC02B7CA2B70045A3FD /* DetailCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B78EBF2B7CA2B70045A3FD /* DetailCoffeeViewController.swift */; };
 		52B78EC22B7CA2C70045A3FD /* GratitudeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B78EC12B7CA2C70045A3FD /* GratitudeController.swift */; };
 		52B78ECF2B7CD2100045A3FD /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B78ECC2B7CD2100045A3FD /* AmaticSC-Regular.ttf */; };
@@ -22,7 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		52B78EBD2B7CA2A40045A3FD /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		52B78EBD2B7CA2A40045A3FD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		52B78EBF2B7CA2B70045A3FD /* DetailCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoffeeViewController.swift; sourceTree = "<group>"; };
 		52B78EC12B7CA2C70045A3FD /* GratitudeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeController.swift; sourceTree = "<group>"; };
 		52B78ECC2B7CD2100045A3FD /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				52E7CB612B71475C0066B2F8 /* LoginViewController.swift */,
-				52B78EBD2B7CA2A40045A3FD /* MenuController.swift */,
+				52B78EBD2B7CA2A40045A3FD /* MenuViewController.swift */,
 				52B78EBF2B7CA2B70045A3FD /* DetailCoffeeViewController.swift */,
 				52B78EC12B7CA2C70045A3FD /* GratitudeController.swift */,
 			);
@@ -220,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52B78EBE2B7CA2A40045A3FD /* MenuController.swift in Sources */,
+				52B78EBE2B7CA2A40045A3FD /* MenuViewController.swift in Sources */,
 				52E7CB622B71475C0066B2F8 /* LoginViewController.swift in Sources */,
 				52E7CB5E2B71475C0066B2F8 /* AppDelegate.swift in Sources */,
 				52B78EC02B7CA2B70045A3FD /* DetailCoffeeViewController.swift in Sources */,

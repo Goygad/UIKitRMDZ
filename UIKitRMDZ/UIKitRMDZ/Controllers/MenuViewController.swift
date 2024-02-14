@@ -4,7 +4,7 @@
 import UIKit
 
 /// Класс с меню кафе
-final class MenuController: UIViewController {
+final class MenuViewController: UIViewController {
     // MARK: - Constants
 
     /// Содержание ячейки с адресом
@@ -22,7 +22,7 @@ final class MenuController: UIViewController {
 
     // MARK: - Visual
 
-    private var appNameLabel: UILabel = {
+    private let appNameLabel: UILabel = {
         let label = UILabel()
         label.text = "КофеиновЪ"
         label.frame = CGRect(x: 100, y: 49, width: 175, height: 75)
@@ -31,7 +31,7 @@ final class MenuController: UIViewController {
         return label
     }()
 
-    private var welcomeLabel: UILabel = {
+    private let welcomeLabel: UILabel = {
         let label = UILabel()
         label.text = "Добро пожаловать,\nГость"
         label.numberOfLines = 0
@@ -42,7 +42,7 @@ final class MenuController: UIViewController {
         return label
     }()
 
-    private var guestImage: UIButton = {
+    private let guestImageView: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(named: "buttons")
         button.setTitle("Г", for: .normal)
@@ -61,7 +61,7 @@ final class MenuController: UIViewController {
         return viewBack
     }()
 
-    private var adressBackView: UIView = {
+    private let adressBackView: UIView = {
         let backView = UIView()
         backView.frame = CGRect(x: 20, y: 40, width: 335, height: 70)
         backView.backgroundColor = UIColor(named: "adressViewColor")
@@ -69,14 +69,14 @@ final class MenuController: UIViewController {
         return backView
     }()
 
-    private var pointAtadressViewImage: UIImageView = {
+    private let pointAtadressViewImage: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 289, y: 20, width: 20, height: 29)
         image.image = UIImage(named: "point")
         return image
     }()
 
-    private var adressLabel: UILabel = {
+    private let adressLabel: UILabel = {
         let label = UILabel()
         label.text = Adress.textAdress.rawValue
         label.numberOfLines = 0
@@ -87,7 +87,7 @@ final class MenuController: UIViewController {
         return label
     }()
 
-    private var acceptGeoLabel: UILabel = {
+    private let acceptGeoLabel: UILabel = {
         let label = UILabel()
         label.text = Adress.description.rawValue
         label.numberOfLines = 0
@@ -98,14 +98,14 @@ final class MenuController: UIViewController {
         return label
     }()
 
-    private var menuImage: UIImageView = {
+    private let menuImageView: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 125, y: 122, width: 125, height: 80)
         image.image = UIImage(named: "menu")
         return image
     }()
 
-    private var menuElementPieView: UIView = {
+    private let menuElementPieView: UIView = {
         let backView = UIView()
         backView.frame = CGRect(x: 20, y: 216, width: 335, height: 80)
         backView.backgroundColor = UIColor(named: "menuElement")
@@ -113,7 +113,7 @@ final class MenuController: UIViewController {
         return backView
     }()
 
-    private var pieLabel: UILabel = {
+    private let pieLabel: UILabel = {
         let label = UILabel()
         label.text = MenuPoints.pie.rawValue
         label.numberOfLines = 0
@@ -124,14 +124,14 @@ final class MenuController: UIViewController {
         return label
     }()
 
-    private var pieImageView: UIImageView = {
+    private let pieImageView: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 252, y: 5, width: 70, height: 70)
         image.image = UIImage(named: "pie")
         return image
     }()
 
-    private var menuElementDrinksView: UIView = {
+    private let menuElementDrinksView: UIView = {
         let backView = UIView()
         backView.frame = CGRect(x: 20, y: 316, width: 335, height: 80)
         backView.backgroundColor = UIColor(named: "menuElement")
@@ -139,7 +139,7 @@ final class MenuController: UIViewController {
         return backView
     }()
 
-    private var drinksLabel: UILabel = {
+    private let drinksLabel: UILabel = {
         let label = UILabel()
         label.text = MenuPoints.drinks.rawValue
         label.numberOfLines = 0
@@ -150,7 +150,7 @@ final class MenuController: UIViewController {
         return label
     }()
 
-    private var drinksImageView: UIImageView = {
+    private let drinksImageView: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 252, y: 20, width: 70, height: 44)
         image.image = UIImage(named: "cup")
@@ -166,7 +166,7 @@ final class MenuController: UIViewController {
         return button
     }()
 
-    private var coffeLabel: UILabel = {
+    private let coffeLabel: UILabel = {
         let label = UILabel()
         label.text = MenuPoints.coffe.rawValue
         label.numberOfLines = 0
@@ -177,7 +177,7 @@ final class MenuController: UIViewController {
         return label
     }()
 
-    private var coffeImageView: UIImageView = {
+    private let coffeImageView: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 252, y: 5, width: 70, height: 70)
         image.image = UIImage(named: "cup2")
@@ -198,11 +198,11 @@ final class MenuController: UIViewController {
 
         view.addSubview(appNameLabel)
         view.addSubview(welcomeLabel)
-        view.addSubview(guestImage)
+        view.addSubview(guestImageView)
         view.addSubview(backgroundMainView)
 
         backgroundMainView.addSubview(adressBackView)
-        backgroundMainView.addSubview(menuImage)
+        backgroundMainView.addSubview(menuImageView)
         backgroundMainView.addSubview(menuElementPieView)
         backgroundMainView.addSubview(menuElementDrinksView)
         backgroundMainView.addSubview(coffeButton)
