@@ -32,7 +32,7 @@ final class MenuViewController: UIViewController {
         label.text = LoginViewController.ConstantStrings.appName
         label.frame = CGRect(x: 100, y: 49, width: 175, height: 75)
         label.font = UIFont(name: "AmaticSC-Bold", size: 55)
-        label.textColor = UIColor(named: "nameAppColor")
+        label.textColor = .nameApp
         return label
     }()
 
