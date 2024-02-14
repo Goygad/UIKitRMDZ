@@ -7,19 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52B78EBA2B7CA22D0045A3FD /* AmaticSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B78EB72B7CA22D0045A3FD /* AmaticSC-Regular.ttf */; };
+		52B78EBB2B7CA22D0045A3FD /* AmaticSC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52B78EB82B7CA22D0045A3FD /* AmaticSC-Bold.ttf */; };
+		52B78EBC2B7CA22D0045A3FD /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 52B78EB92B7CA22D0045A3FD /* OFL.txt */; };
+		52B78EBE2B7CA2A40045A3FD /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B78EBD2B7CA2A40045A3FD /* MenuController.swift */; };
+		52B78EC02B7CA2B70045A3FD /* DetailCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B78EBF2B7CA2B70045A3FD /* DetailCoffeeViewController.swift */; };
+		52B78EC22B7CA2C70045A3FD /* GratitudeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B78EC12B7CA2C70045A3FD /* GratitudeController.swift */; };
 		52E7CB5E2B71475C0066B2F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7CB5D2B71475C0066B2F8 /* AppDelegate.swift */; };
 		52E7CB602B71475C0066B2F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7CB5F2B71475C0066B2F8 /* SceneDelegate.swift */; };
-		52E7CB622B71475C0066B2F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7CB612B71475C0066B2F8 /* ViewController.swift */; };
+		52E7CB622B71475C0066B2F8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7CB612B71475C0066B2F8 /* LoginViewController.swift */; };
 		52E7CB652B71475C0066B2F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E7CB632B71475C0066B2F8 /* Main.storyboard */; };
 		52E7CB672B71475F0066B2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E7CB662B71475F0066B2F8 /* Assets.xcassets */; };
 		52E7CB6A2B71475F0066B2F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E7CB682B71475F0066B2F8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52B78EB72B7CA22D0045A3FD /* AmaticSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Regular.ttf"; sourceTree = "<group>"; };
+		52B78EB82B7CA22D0045A3FD /* AmaticSC-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AmaticSC-Bold.ttf"; sourceTree = "<group>"; };
+		52B78EB92B7CA22D0045A3FD /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		52B78EBD2B7CA2A40045A3FD /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		52B78EBF2B7CA2B70045A3FD /* DetailCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoffeeViewController.swift; sourceTree = "<group>"; };
+		52B78EC12B7CA2C70045A3FD /* GratitudeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeController.swift; sourceTree = "<group>"; };
 		52E7CB5A2B71475C0066B2F8 /* UIKitRMDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitRMDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E7CB5D2B71475C0066B2F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E7CB5F2B71475C0066B2F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52E7CB612B71475C0066B2F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52E7CB612B71475C0066B2F8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		52E7CB642B71475C0066B2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52E7CB662B71475F0066B2F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E7CB692B71475F0066B2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +49,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52B78EB62B7CA22D0045A3FD /* Amatic_SC */ = {
+			isa = PBXGroup;
+			children = (
+				52B78EB72B7CA22D0045A3FD /* AmaticSC-Regular.ttf */,
+				52B78EB82B7CA22D0045A3FD /* AmaticSC-Bold.ttf */,
+				52B78EB92B7CA22D0045A3FD /* OFL.txt */,
+			);
+			name = Amatic_SC;
+			path = ../../../../../Downloads/Amatic_SC;
+			sourceTree = "<group>";
+		};
+		52B78EC32B7CA35E0045A3FD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52E7CB612B71475C0066B2F8 /* LoginViewController.swift */,
+				52B78EBD2B7CA2A40045A3FD /* MenuController.swift */,
+				52B78EBF2B7CA2B70045A3FD /* DetailCoffeeViewController.swift */,
+				52B78EC12B7CA2C70045A3FD /* GratitudeController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		52E7CB512B71475C0066B2F8 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +90,10 @@
 		52E7CB5C2B71475C0066B2F8 /* UIKitRMDZ */ = {
 			isa = PBXGroup;
 			children = (
+				52B78EB62B7CA22D0045A3FD /* Amatic_SC */,
 				52E7CB5D2B71475C0066B2F8 /* AppDelegate.swift */,
 				52E7CB5F2B71475C0066B2F8 /* SceneDelegate.swift */,
-				52E7CB612B71475C0066B2F8 /* ViewController.swift */,
+				52B78EC32B7CA35E0045A3FD /* Controllers */,
 				52E7CB632B71475C0066B2F8 /* Main.storyboard */,
 				52E7CB662B71475F0066B2F8 /* Assets.xcassets */,
 				52E7CB682B71475F0066B2F8 /* LaunchScreen.storyboard */,
@@ -127,6 +162,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B78EBC2B7CA22D0045A3FD /* OFL.txt in Resources */,
+				52B78EBA2B7CA22D0045A3FD /* AmaticSC-Regular.ttf in Resources */,
+				52B78EBB2B7CA22D0045A3FD /* AmaticSC-Bold.ttf in Resources */,
 				52E7CB6A2B71475F0066B2F8 /* LaunchScreen.storyboard in Resources */,
 				52E7CB672B71475F0066B2F8 /* Assets.xcassets in Resources */,
 				52E7CB652B71475C0066B2F8 /* Main.storyboard in Resources */,
@@ -183,9 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E7CB622B71475C0066B2F8 /* ViewController.swift in Sources */,
+				52B78EBE2B7CA2A40045A3FD /* MenuController.swift in Sources */,
+				52E7CB622B71475C0066B2F8 /* LoginViewController.swift in Sources */,
 				52E7CB5E2B71475C0066B2F8 /* AppDelegate.swift in Sources */,
+				52B78EC02B7CA2B70045A3FD /* DetailCoffeeViewController.swift in Sources */,
 				52E7CB602B71475C0066B2F8 /* SceneDelegate.swift in Sources */,
+				52B78EC22B7CA2C70045A3FD /* GratitudeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,11 +1,11 @@
-// ViewController.swift
+// DetailCoffeeViewController.swift
 // Copyright © RoadMap. All rights reserved.
 
 import UIKit
 
-class ViewController: UIViewController {
+class DetailCoffeeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .red
     }
 }
