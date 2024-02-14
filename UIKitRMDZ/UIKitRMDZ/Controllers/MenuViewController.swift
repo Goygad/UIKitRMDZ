@@ -3,17 +3,15 @@
 
 import UIKit
 
-/// Класс с меню кафе
+/// Экран меню кафе
 final class MenuViewController: UIViewController {
     // MARK: - Constants
 
-    /// Содержание ячейки с адресом
     private enum Adress {
         static let textAdress = "Адреса кофеен"
         static let description = "Разрѣшите доступъ къ ​геолокаціи для поиска ближайшей кофейни"
     }
 
-    /// Названия ячеек меню
     private enum MenuPoints {
         static let pie = "Пти пате аля «РюсЪ»"
         static let drinks = "Горячiя напитки"
@@ -29,7 +27,7 @@ final class MenuViewController: UIViewController {
 
     private let appNameLabel: UILabel = {
         let label = UILabel()
-        label.text = LoginViewController.ConstantStrings.appName
+        label.text = LoginViewController.Constant.appName
         label.frame = CGRect(x: 100, y: 49, width: 175, height: 75)
         label.font = UIFont(name: "AmaticSC-Bold", size: 55)
         label.textColor = .nameApp
@@ -41,15 +39,15 @@ final class MenuViewController: UIViewController {
         label.text = Constants.greetings
         label.numberOfLines = 0
         label.frame = CGRect(x: 20, y: 147, width: 185, height: 44)
-        label.font = UIFont(name: LoginViewController.ConstantStrings.verdanaItalic, size: 16)
+        label.font = UIFont(name: LoginViewController.Constant.verdanaItalic, size: 16)
         label.font = .systemFont(ofSize: 16, weight: .bold)
-        label.textColor = UIColor(named: "whiteColor")
+        label.textColor = .whiteCol
         return label
     }()
 
-    private let guestImageView: UIButton = {
+    private let guestImageButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor(named: "buttons")
+        button.backgroundColor = .buttons
         button.setTitle(Constants.character, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .heavy)
         button.frame = CGRect(x: 311, y: 147, width: 44, height: 44)
@@ -69,7 +67,7 @@ final class MenuViewController: UIViewController {
     private let adressBackView: UIView = {
         let backView = UIView()
         backView.frame = CGRect(x: 20, y: 40, width: 335, height: 70)
-        backView.backgroundColor = UIColor(named: "adressViewColor")
+        backView.backgroundColor = .adressView
         backView.layer.cornerRadius = 16
         return backView
     }()
@@ -77,7 +75,7 @@ final class MenuViewController: UIViewController {
     private let pointAtadressViewImage: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 289, y: 20, width: 20, height: 29)
-        image.image = UIImage(named: "point")
+        image.image = .point
         return image
     }()
 
@@ -86,7 +84,7 @@ final class MenuViewController: UIViewController {
         label.text = Adress.textAdress
         label.numberOfLines = 0
         label.frame = CGRect(x: 15, y: 12, width: 150, height: 15)
-        label.font = UIFont(name: LoginViewController.ConstantStrings.verdana, size: 12)
+        label.font = UIFont(name: LoginViewController.Constant.verdana, size: 12)
         label.font = .systemFont(ofSize: 12, weight: .bold)
         label.textColor = .black
         return label
@@ -97,7 +95,7 @@ final class MenuViewController: UIViewController {
         label.text = Adress.description
         label.numberOfLines = 0
         label.frame = CGRect(x: 15, y: 30, width: 260, height: 30)
-        label.font = UIFont(name: LoginViewController.ConstantStrings.verdana, size: 12)
+        label.font = UIFont(name: LoginViewController.Constant.verdana, size: 12)
         label.font = .systemFont(ofSize: 12, weight: .regular)
         label.textColor = .systemGray
         return label
@@ -106,14 +104,14 @@ final class MenuViewController: UIViewController {
     private let menuImageView: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 125, y: 122, width: 125, height: 80)
-        image.image = UIImage(named: "menu")
+        image.image = .menu
         return image
     }()
 
     private let menuElementPieView: UIView = {
         let backView = UIView()
         backView.frame = CGRect(x: 20, y: 216, width: 335, height: 80)
-        backView.backgroundColor = UIColor(named: "menuElement")
+        backView.backgroundColor = .menuElement
         backView.layer.cornerRadius = 16
         return backView
     }()
@@ -124,7 +122,7 @@ final class MenuViewController: UIViewController {
         label.numberOfLines = 0
         label.textAlignment = .left
         label.frame = CGRect(x: 25, y: 30, width: 220, height: 19)
-        label.font = UIFont(name: LoginViewController.ConstantStrings.verdanaBoldItalic, size: 16.0)
+        label.font = UIFont(name: LoginViewController.Constant.verdanaBoldItalic, size: 16.0)
         label.textColor = .black
         return label
     }()
@@ -132,14 +130,14 @@ final class MenuViewController: UIViewController {
     private let pieImageView: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 252, y: 5, width: 70, height: 70)
-        image.image = UIImage(named: "pie")
+        image.image = .pie
         return image
     }()
 
     private let menuElementDrinksView: UIView = {
         let backView = UIView()
         backView.frame = CGRect(x: 20, y: 316, width: 335, height: 80)
-        backView.backgroundColor = UIColor(named: "menuElement")
+        backView.backgroundColor = .menuElement
         backView.layer.cornerRadius = 16
         return backView
     }()
@@ -150,7 +148,7 @@ final class MenuViewController: UIViewController {
         label.numberOfLines = 0
         label.textAlignment = .left
         label.frame = CGRect(x: 25, y: 30, width: 220, height: 19)
-        label.font = UIFont(name: LoginViewController.ConstantStrings.verdanaBoldItalic, size: 16.0)
+        label.font = UIFont(name: LoginViewController.Constant.verdanaBoldItalic, size: 16.0)
         label.textColor = .black
         return label
     }()
@@ -158,16 +156,16 @@ final class MenuViewController: UIViewController {
     private let drinksImageView: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 252, y: 20, width: 70, height: 44)
-        image.image = UIImage(named: "cup")
+        image.image = .cup
         return image
     }()
 
     private lazy var coffeButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = UIColor(named: "menuElement")
+        button.backgroundColor = .menuElement
         button.frame = CGRect(x: 20, y: 416, width: 335, height: 80)
         button.layer.cornerRadius = 16
-        button.addTarget(self, action: #selector(presentDetails), for: .touchUpInside)
+        button.addTarget(self, action: #selector(presentCoffeeDetails), for: .touchUpInside)
         return button
     }()
 
@@ -177,7 +175,7 @@ final class MenuViewController: UIViewController {
         label.numberOfLines = 0
         label.textAlignment = .left
         label.frame = CGRect(x: 25, y: 30, width: 220, height: 19)
-        label.font = UIFont(name: LoginViewController.ConstantStrings.verdanaBoldItalic, size: 16.0)
+        label.font = UIFont(name: LoginViewController.Constant.verdanaBoldItalic, size: 16.0)
         label.textColor = .black
         return label
     }()
@@ -185,7 +183,7 @@ final class MenuViewController: UIViewController {
     private let coffeImageView: UIImageView = {
         let image = UIImageView()
         image.frame = CGRect(x: 252, y: 5, width: 70, height: 70)
-        image.image = UIImage(named: "cup2")
+        image.image = .cup2
         return image
     }()
 
@@ -199,11 +197,11 @@ final class MenuViewController: UIViewController {
     // MARK: - Private methods
 
     private func setUI() {
-        view.backgroundColor = UIColor(named: "back")
+        view.backgroundColor = .back
 
         view.addSubview(appNameLabel)
         view.addSubview(welcomeLabel)
-        view.addSubview(guestImageView)
+        view.addSubview(guestImageButton)
         view.addSubview(backgroundMainView)
 
         backgroundMainView.addSubview(adressBackView)
@@ -227,9 +225,9 @@ final class MenuViewController: UIViewController {
     }
 
     // TODO: Реализовать переход на экарн деталей
-    @objc private func presentDetails() {
+    @objc private func presentCoffeeDetails() {
         let details = DetailCoffeeViewController()
-        let test = GratitudeController()
-        navigationController?.pushViewController(test, animated: true)
+        let gratitudeController = GratitudeController()
+        navigationController?.pushViewController(gratitudeController, animated: true)
     }
 }

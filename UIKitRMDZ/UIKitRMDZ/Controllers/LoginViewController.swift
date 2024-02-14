@@ -3,12 +3,11 @@
 
 import UIKit
 
-/// Класс с логином и паролем
+/// Экран авторизации
 final class LoginViewController: UIViewController {
     // MARK: - Constants
 
-    /// Строки используемые в названиях этого экрана
-    enum ConstantStrings {
+    enum Constant {
         static let appName = "КофеиновЪ"
         static let autorization = "Авторизация"
         static let login = "Логин"
@@ -20,13 +19,13 @@ final class LoginViewController: UIViewController {
         static let verdanaBoldItalic = "Verdana-BoldItalic"
     }
 
-    private var secureText = true
+    private var isSecureText = true
 
     // MARK: - Visual
 
     private let appNameLabel: UILabel = {
         let label = UILabel()
-        label.text = ConstantStrings.appName
+        label.text = Constant.appName
         label.frame = CGRect(x: 100, y: 103, width: 175, height: 75)
         label.font = UIFont(name: "AmaticSC-Bold", size: 55)
         label.textColor = UIColor(named: "nameAppColor")
@@ -44,27 +43,27 @@ final class LoginViewController: UIViewController {
 
     private let autorizationLabel: UILabel = {
         let label = UILabel()
-        label.text = ConstantStrings.autorization
+        label.text = Constant.autorization
         label.frame = CGRect(x: 20, y: 32, width: 195, height: 31)
-        label.font = UIFont(name: ConstantStrings.verdana, size: 26)
+        label.font = UIFont(name: Constant.verdana, size: 26)
         label.font = .systemFont(ofSize: 26, weight: .bold)
         return label
     }()
 
     private let loginLabel: UILabel = {
         let label = UILabel()
-        label.text = ConstantStrings.login
+        label.text = Constant.login
         label.frame = CGRect(x: 20, y: 84, width: 175, height: 19)
-        label.font = UIFont(name: ConstantStrings.verdana, size: 16)
+        label.font = UIFont(name: Constant.verdana, size: 16)
         label.font = .systemFont(ofSize: 16, weight: .bold)
         return label
     }()
 
     private let passwordLabel: UILabel = {
         let label = UILabel()
-        label.text = ConstantStrings.password
+        label.text = Constant.password
         label.frame = CGRect(x: 20, y: 159, width: 195, height: 19)
-        label.font = UIFont(name: ConstantStrings.verdana, size: 16)
+        label.font = UIFont(name: Constant.verdana, size: 16)
         label.font = .systemFont(ofSize: 16, weight: .bold)
         return label
     }()
@@ -72,13 +71,13 @@ final class LoginViewController: UIViewController {
     private let loginTextField: UITextField = {
         let textField = UITextField()
         textField.frame = CGRect(x: 20, y: 113, width: 195, height: 19)
-        textField.placeholder = ConstantStrings.loginPlaceholder
+        textField.placeholder = Constant.loginPlaceholder
         return textField
     }()
 
     private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = ConstantStrings.passwordPlaceholder
+        textField.placeholder = Constant.passwordPlaceholder
         textField.frame = CGRect(x: 20, y: 188, width: 195, height: 19)
         textField.addTarget(self, action: #selector(changePasswordField), for: .editingChanged)
         return textField
@@ -115,7 +114,7 @@ final class LoginViewController: UIViewController {
         button.backgroundColor = UIColor(named: "newButtonColorLight")
         button.layer.cornerRadius = 12
         button.isEnabled = false
-        button.addTarget(self, action: #selector(addVCPresent), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showMenuViewController), for: .touchUpInside)
         return button
     }()
 
@@ -146,10 +145,8 @@ final class LoginViewController: UIViewController {
 
     private func setUI() {
         view.backgroundColor = UIColor(named: "back")
-
         view.addSubview(backgroundMainView)
         view.addSubview(appNameLabel)
-
         backgroundMainView.addSubview(autorizationLabel)
         backgroundMainView.addSubview(loginLabel)
         backgroundMainView.addSubview(passwordLabel)
@@ -159,32 +156,24 @@ final class LoginViewController: UIViewController {
         backgroundMainView.addSubview(passwordUnderView)
         backgroundMainView.addSubview(eyeButton)
         backgroundMainView.addSubview(loginButton)
-
         loginButton.addSubview(loginButtonImageView)
     }
 
     @objc private func changePasswordField() {
         loginButton.isEnabled = true
-        loginButton.backgroundColor = UIColor(named: "newButtonColor")
+        loginButton.backgroundColor = .newButton
     }
 
-    @objc private func addVCPresent() {
-        let menu = MenuViewController()
-        let navController = UINavigationController(rootViewController: menu)
+    @objc private func showMenuViewController() {
+        let menuViewController = MenuViewController()
+        let navController = UINavigationController(rootViewController: menuViewController)
         navController.modalPresentationStyle = .fullScreen
         present(navController, animated: true)
     }
 
     @objc private func addSecurePass() {
-        if secureText == true {
-            passwordTextField.isSecureTextEntry = false
-            secureText = false
-            eyeButton.setImage(UIImage(systemName: "eye.slash.fill"), for: .normal)
-
-        } else {
-            passwordTextField.isSecureTextEntry = true
-            eyeButton.setImage(UIImage(systemName: "eye.fill"), for: .normal)
-            secureText = true
-        }
+        passwordTextField.isSecureTextEntry = isSecureText ? false : true
+        eyeButton.setImage(UIImage(systemName: isSecureText ? "eye.slash.fill" : "eye.fill"), for: .normal)
+        isSecureText = isSecureText ? false : true
     }
 }
