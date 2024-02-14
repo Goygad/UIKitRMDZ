@@ -7,7 +7,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     var navController = UINavigationController()
     let loginVC = LoginViewController()
-    let menuVC = MenuController()
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
@@ -16,8 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        navController = UINavigationController(rootViewController: menuVC)
-        window.rootViewController = navController
+        window.rootViewController = loginVC
         window.makeKeyAndVisible()
     }
 }

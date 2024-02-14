@@ -5,7 +5,22 @@ import UIKit
 
 /// Класс с меню кафе
 final class MenuController: UIViewController {
-    // MARK: - Private properties
+    // MARK: - Constants
+
+    /// Содержание ячейки с адресом
+    private enum Adress: String {
+        case textAdress = "Адреса кофеен"
+        case description = "Разрѣшите доступъ къ ​геолокаціи для поиска ближайшей кофейни"
+    }
+
+    /// Названия ячеек меню
+    private enum MenuPoints: String {
+        case pie = "Пти пате аля «РюсЪ»"
+        case drinks = "Горячiя напитки"
+        case coffe = "Кофий"
+    }
+
+    // MARK: - Visual
 
     private var appNameLabel: UILabel = {
         let label = UILabel()
@@ -37,8 +52,9 @@ final class MenuController: UIViewController {
         return button
     }()
 
-    private var backgroundMainView: UIView = {
+    private lazy var backgroundMainView: UIView = {
         let viewBack = UIView()
+        viewBack.frame = CGRect(x: 0, y: 248, width: view.frame.size.width, height: view.frame.size.height)
         viewBack.backgroundColor = .white
         viewBack.layer.cornerRadius = 20
         viewBack.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -62,7 +78,7 @@ final class MenuController: UIViewController {
 
     private var adressLabel: UILabel = {
         let label = UILabel()
-        label.text = "Адреса кофеен"
+        label.text = Adress.textAdress.rawValue
         label.numberOfLines = 0
         label.frame = CGRect(x: 15, y: 12, width: 150, height: 15)
         label.font = UIFont(name: "Verdana", size: 12)
@@ -73,7 +89,7 @@ final class MenuController: UIViewController {
 
     private var acceptGeoLabel: UILabel = {
         let label = UILabel()
-        label.text = "Разрѣшите доступъ къ ​геолокаціи для поиска ближайшей кофейни"
+        label.text = Adress.description.rawValue
         label.numberOfLines = 0
         label.frame = CGRect(x: 15, y: 30, width: 260, height: 30)
         label.font = UIFont(name: "Verdana", size: 12)
@@ -99,7 +115,7 @@ final class MenuController: UIViewController {
 
     private var pieLabel: UILabel = {
         let label = UILabel()
-        label.text = "Пти пате аля «РюсЪ»"
+        label.text = MenuPoints.pie.rawValue
         label.numberOfLines = 0
         label.textAlignment = .left
         label.frame = CGRect(x: 25, y: 30, width: 220, height: 19)
@@ -125,7 +141,7 @@ final class MenuController: UIViewController {
 
     private var drinksLabel: UILabel = {
         let label = UILabel()
-        label.text = "Горячiя напитки"
+        label.text = MenuPoints.drinks.rawValue
         label.numberOfLines = 0
         label.textAlignment = .left
         label.frame = CGRect(x: 25, y: 30, width: 220, height: 19)
@@ -152,7 +168,7 @@ final class MenuController: UIViewController {
 
     private var coffeLabel: UILabel = {
         let label = UILabel()
-        label.text = "Кофий"
+        label.text = MenuPoints.coffe.rawValue
         label.numberOfLines = 0
         label.textAlignment = .left
         label.frame = CGRect(x: 25, y: 30, width: 220, height: 19)
@@ -180,8 +196,6 @@ final class MenuController: UIViewController {
     private func setUI() {
         view.backgroundColor = UIColor(named: "back")
 
-        backgroundMainView.frame = CGRect(x: 0, y: 248, width: view.frame.size.width, height: view.frame.size.height)
-
         view.addSubview(appNameLabel)
         view.addSubview(welcomeLabel)
         view.addSubview(guestImage)
@@ -207,6 +221,7 @@ final class MenuController: UIViewController {
         coffeButton.addSubview(coffeImageView)
     }
 
+    // TODO: Реализовать переход на экарн деталей
     @objc private func presentDetails() {
         let details = DetailCoffeeViewController()
         let test = GratitudeController()
