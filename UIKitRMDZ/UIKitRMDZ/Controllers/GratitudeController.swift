@@ -7,10 +7,14 @@ import UIKit
 
 final class GratitudeController: UIViewController {
     // MARK: - Constants
-    private enum ConstantStrings: String {
-        case good = "Хорошо"
-        
+
+    private enum ConstantStrings {
+        static let good = "Хорошо"
+        static let promo = """
+        Разскажи о насъ другу, отправь ему промокодъ на безплатный напитокъ и получи скидку 10% на слѣдующій заказъ.
+        """
     }
+
     // MARK: - Visual
 
     private let graphicPatternImageView: UIImageView = {
@@ -29,12 +33,9 @@ final class GratitudeController: UIViewController {
 
     private let promoLabel: UILabel = {
         let label = UILabel()
-        label.text =
-            """
-            Разскажи о насъ другу, отправь ему промокодъ на безплатный напитокъ и получи скидку 10% на слѣдующій заказъ.
-            """
+        label.text = ConstantStrings.promo
         label.frame = CGRect(x: 30, y: 362, width: 315, height: 89)
-        label.font = UIFont(name: "Verdana", size: 16)
+        label.font = UIFont(name: LoginViewController.ConstantStrings.verdana, size: 16)
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = .systemFont(ofSize: 16, weight: .regular)
@@ -45,7 +46,7 @@ final class GratitudeController: UIViewController {
     private lazy var goodButton: UIButton = {
         let button = UIButton()
         button.frame = CGRect(x: 20, y: 632, width: 335, height: 44)
-        button.setTitle(ConstantStrings.good.rawValue, for: .normal)
+        button.setTitle(ConstantStrings.good, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .bold)
         button.backgroundColor = UIColor(named: "newButtonColor")
         button.layer.cornerRadius = 12

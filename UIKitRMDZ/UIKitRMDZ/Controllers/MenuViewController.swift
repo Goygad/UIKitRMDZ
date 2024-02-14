@@ -1,4 +1,4 @@
-// MenuController.swift
+// MenuViewController.swift
 // Copyright © RoadMap. All rights reserved.
 
 import UIKit
@@ -8,23 +8,28 @@ final class MenuViewController: UIViewController {
     // MARK: - Constants
 
     /// Содержание ячейки с адресом
-    private enum Adress: String {
-        case textAdress = "Адреса кофеен"
-        case description = "Разрѣшите доступъ къ ​геолокаціи для поиска ближайшей кофейни"
+    private enum Adress {
+        static let textAdress = "Адреса кофеен"
+        static let description = "Разрѣшите доступъ къ ​геолокаціи для поиска ближайшей кофейни"
     }
 
     /// Названия ячеек меню
-    private enum MenuPoints: String {
-        case pie = "Пти пате аля «РюсЪ»"
-        case drinks = "Горячiя напитки"
-        case coffe = "Кофий"
+    private enum MenuPoints {
+        static let pie = "Пти пате аля «РюсЪ»"
+        static let drinks = "Горячiя напитки"
+        static let coffe = "Кофий"
+    }
+
+    private enum Constants {
+        static let greetings = "Добро пожаловать,\nГость"
+        static let character = "Г"
     }
 
     // MARK: - Visual
 
     private let appNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "КофеиновЪ"
+        label.text = LoginViewController.ConstantStrings.appName
         label.frame = CGRect(x: 100, y: 49, width: 175, height: 75)
         label.font = UIFont(name: "AmaticSC-Bold", size: 55)
         label.textColor = UIColor(named: "nameAppColor")
@@ -33,10 +38,10 @@ final class MenuViewController: UIViewController {
 
     private let welcomeLabel: UILabel = {
         let label = UILabel()
-        label.text = "Добро пожаловать,\nГость"
+        label.text = Constants.greetings
         label.numberOfLines = 0
         label.frame = CGRect(x: 20, y: 147, width: 185, height: 44)
-        label.font = UIFont(name: "Verdana-Italic", size: 16)
+        label.font = UIFont(name: LoginViewController.ConstantStrings.verdanaItalic, size: 16)
         label.font = .systemFont(ofSize: 16, weight: .bold)
         label.textColor = UIColor(named: "whiteColor")
         return label
@@ -45,7 +50,7 @@ final class MenuViewController: UIViewController {
     private let guestImageView: UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(named: "buttons")
-        button.setTitle("Г", for: .normal)
+        button.setTitle(Constants.character, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .heavy)
         button.frame = CGRect(x: 311, y: 147, width: 44, height: 44)
         button.layer.cornerRadius = button.frame.size.width / 2
@@ -78,10 +83,10 @@ final class MenuViewController: UIViewController {
 
     private let adressLabel: UILabel = {
         let label = UILabel()
-        label.text = Adress.textAdress.rawValue
+        label.text = Adress.textAdress
         label.numberOfLines = 0
         label.frame = CGRect(x: 15, y: 12, width: 150, height: 15)
-        label.font = UIFont(name: "Verdana", size: 12)
+        label.font = UIFont(name: LoginViewController.ConstantStrings.verdana, size: 12)
         label.font = .systemFont(ofSize: 12, weight: .bold)
         label.textColor = .black
         return label
@@ -89,10 +94,10 @@ final class MenuViewController: UIViewController {
 
     private let acceptGeoLabel: UILabel = {
         let label = UILabel()
-        label.text = Adress.description.rawValue
+        label.text = Adress.description
         label.numberOfLines = 0
         label.frame = CGRect(x: 15, y: 30, width: 260, height: 30)
-        label.font = UIFont(name: "Verdana", size: 12)
+        label.font = UIFont(name: LoginViewController.ConstantStrings.verdana, size: 12)
         label.font = .systemFont(ofSize: 12, weight: .regular)
         label.textColor = .systemGray
         return label
@@ -115,11 +120,11 @@ final class MenuViewController: UIViewController {
 
     private let pieLabel: UILabel = {
         let label = UILabel()
-        label.text = MenuPoints.pie.rawValue
+        label.text = MenuPoints.pie
         label.numberOfLines = 0
         label.textAlignment = .left
         label.frame = CGRect(x: 25, y: 30, width: 220, height: 19)
-        label.font = UIFont(name: "Verdana-BoldItalic", size: 16.0)
+        label.font = UIFont(name: LoginViewController.ConstantStrings.verdanaBoldItalic, size: 16.0)
         label.textColor = .black
         return label
     }()
@@ -141,11 +146,11 @@ final class MenuViewController: UIViewController {
 
     private let drinksLabel: UILabel = {
         let label = UILabel()
-        label.text = MenuPoints.drinks.rawValue
+        label.text = MenuPoints.drinks
         label.numberOfLines = 0
         label.textAlignment = .left
         label.frame = CGRect(x: 25, y: 30, width: 220, height: 19)
-        label.font = UIFont(name: "Verdana-BoldItalic", size: 16.0)
+        label.font = UIFont(name: LoginViewController.ConstantStrings.verdanaBoldItalic, size: 16.0)
         label.textColor = .black
         return label
     }()
@@ -168,11 +173,11 @@ final class MenuViewController: UIViewController {
 
     private let coffeLabel: UILabel = {
         let label = UILabel()
-        label.text = MenuPoints.coffe.rawValue
+        label.text = MenuPoints.coffe
         label.numberOfLines = 0
         label.textAlignment = .left
         label.frame = CGRect(x: 25, y: 30, width: 220, height: 19)
-        label.font = UIFont(name: "Verdana-BoldItalic", size: 16.0)
+        label.font = UIFont(name: LoginViewController.ConstantStrings.verdanaBoldItalic, size: 16.0)
         label.textColor = .black
         return label
     }()

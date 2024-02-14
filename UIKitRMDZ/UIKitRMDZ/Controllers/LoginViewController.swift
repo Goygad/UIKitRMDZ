@@ -6,15 +6,18 @@ import UIKit
 /// Класс с логином и паролем
 final class LoginViewController: UIViewController {
     // MARK: - Constants
-/// Строки используемые в названиях этого экрана 
-    private enum ConstantStrings: String {
-        case appName = "КофеиновЪ"
-        case autorization = "Авторизация"
-        case login = "Логин"
-        case password = "Пароль"
-        case loginPlaceholder = "Введите почту"
-        case passwordPlaceholder = "Введите пароль"
-        case verdana = "Verdana"
+
+    /// Строки используемые в названиях этого экрана
+    enum ConstantStrings {
+        static let appName = "КофеиновЪ"
+        static let autorization = "Авторизация"
+        static let login = "Логин"
+        static let password = "Пароль"
+        static let loginPlaceholder = "Введите почту"
+        static let passwordPlaceholder = "Введите пароль"
+        static let verdana = "Verdana"
+        static let verdanaItalic = "Verdana-Italic"
+        static let verdanaBoldItalic = "Verdana-BoldItalic"
     }
 
     private var secureText = true
@@ -23,7 +26,7 @@ final class LoginViewController: UIViewController {
 
     private let appNameLabel: UILabel = {
         let label = UILabel()
-        label.text = ConstantStrings.appName.rawValue
+        label.text = ConstantStrings.appName
         label.frame = CGRect(x: 100, y: 103, width: 175, height: 75)
         label.font = UIFont(name: "AmaticSC-Bold", size: 55)
         label.textColor = UIColor(named: "nameAppColor")
@@ -41,27 +44,27 @@ final class LoginViewController: UIViewController {
 
     private let autorizationLabel: UILabel = {
         let label = UILabel()
-        label.text = ConstantStrings.autorization.rawValue
+        label.text = ConstantStrings.autorization
         label.frame = CGRect(x: 20, y: 32, width: 195, height: 31)
-        label.font = UIFont(name: ConstantStrings.verdana.rawValue, size: 26)
+        label.font = UIFont(name: ConstantStrings.verdana, size: 26)
         label.font = .systemFont(ofSize: 26, weight: .bold)
         return label
     }()
 
     private let loginLabel: UILabel = {
         let label = UILabel()
-        label.text = ConstantStrings.login.rawValue
+        label.text = ConstantStrings.login
         label.frame = CGRect(x: 20, y: 84, width: 175, height: 19)
-        label.font = UIFont(name: ConstantStrings.verdana.rawValue, size: 16)
+        label.font = UIFont(name: ConstantStrings.verdana, size: 16)
         label.font = .systemFont(ofSize: 16, weight: .bold)
         return label
     }()
 
     private let passwordLabel: UILabel = {
         let label = UILabel()
-        label.text = ConstantStrings.password.rawValue
+        label.text = ConstantStrings.password
         label.frame = CGRect(x: 20, y: 159, width: 195, height: 19)
-        label.font = UIFont(name: ConstantStrings.verdana.rawValue, size: 16)
+        label.font = UIFont(name: ConstantStrings.verdana, size: 16)
         label.font = .systemFont(ofSize: 16, weight: .bold)
         return label
     }()
@@ -69,13 +72,13 @@ final class LoginViewController: UIViewController {
     private let loginTextField: UITextField = {
         let textField = UITextField()
         textField.frame = CGRect(x: 20, y: 113, width: 195, height: 19)
-        textField.placeholder = ConstantStrings.loginPlaceholder.rawValue
+        textField.placeholder = ConstantStrings.loginPlaceholder
         return textField
     }()
 
     private lazy var passwordTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = ConstantStrings.passwordPlaceholder.rawValue
+        textField.placeholder = ConstantStrings.passwordPlaceholder
         textField.frame = CGRect(x: 20, y: 188, width: 195, height: 19)
         textField.addTarget(self, action: #selector(changePasswordField), for: .editingChanged)
         return textField
