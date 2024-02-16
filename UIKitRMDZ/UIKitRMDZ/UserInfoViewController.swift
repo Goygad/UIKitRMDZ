@@ -106,25 +106,6 @@ final class UserInfoViewController: UIViewController {
         showDatePicker()
     }
 
-    // MARK: - Public Methods
-
-    func configure(model: UserInfoModel) {
-        nameTextField.text = model.name
-        surnameTextField.text = model.surname
-        if let phone = model.phone {
-            phoneNumberTextField.text = "\(phone)"
-        }
-        if let legSize = model.sizeLeg {
-            sizeLegTextField.text = "\(legSize)"
-        }
-        if let birthday = model.birthday {
-            birthdayTextField.text = "\(birthday)"
-        }
-        if let email = model.email {
-            emailTextField.text = email
-        }
-    }
-
     // MARK: - Private Methods
 
     @objc private func valueChanged(sender: UITextField) {
@@ -169,7 +150,12 @@ final class UserInfoViewController: UIViewController {
         birthdayTextField.inputView = datePicker
         let screenWidth = UIScreen.main.bounds.width
         let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 40.0))
-        let cancel = UIBarButtonItem(title: Constant.cancel, style: .plain, target: self, action: #selector(cancelPressed))
+        let cancel = UIBarButtonItem(
+            title: Constant.cancel,
+            style: .plain,
+            target: self,
+            action: #selector(cancelPressed)
+        )
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let done = UIBarButtonItem(title: Constant.done, style: .plain, target: self, action: #selector(donePressed))
         toolBar.setItems([cancel, flexibleSpace, done], animated: false)
@@ -235,5 +221,26 @@ final class UserInfoViewController: UIViewController {
 
     @objc private func donePressed() {
         view.endEditing(true)
+    }
+}
+
+extension UserInfoViewController {
+    // MARK: - Public Methods
+
+    func configure(model: UserInfoModel) {
+        nameTextField.text = model.name
+        surnameTextField.text = model.surname
+        if let phone = model.phone {
+            phoneNumberTextField.text = "\(phone)"
+        }
+        if let legSize = model.sizeLeg {
+            sizeLegTextField.text = "\(legSize)"
+        }
+        if let birthday = model.birthday {
+            birthdayTextField.text = "\(birthday)"
+        }
+        if let email = model.email {
+            emailTextField.text = email
+        }
     }
 }
