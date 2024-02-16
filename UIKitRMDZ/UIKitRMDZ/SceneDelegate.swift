@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let profileNavigationController = UINavigationController(rootViewController: profileViewController)
         let basketNavigationController = UINavigationController(rootViewController: basketViewController)
         let tabBarController = UITabBarController()
-        tabBarController.setViewControllers([profileNavigationController, basketNavigationController], animated: true)
+        tabBarController.setViewControllers([basketNavigationController, profileNavigationController], animated: true)
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
     }

@@ -51,9 +51,10 @@ final class ProfileViewController: UIViewController {
         let button = UIButton()
         button.setTitle(Constant.myData, for: .normal)
         button.setImage(UIImage(named: Constant.userDataImage), for: .normal)
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 13, bottom: 0, right: -20)
-        button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont(name: Constant.fontVerdana, size: 14)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 13, bottom: 0, right: 240)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 260)
+        button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(tapUserInfoButton), for: .touchUpInside)
         return button
     }()
@@ -62,22 +63,21 @@ final class ProfileViewController: UIViewController {
         let button = UIButton()
         button.setTitle(Constant.bringFriend, for: .normal)
         button.setImage(UIImage(named: Constant.shareImage), for: .normal)
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 13, bottom: 0, right: -20)
-        button.translatesAutoresizingMaskIntoConstraints = false
         button.titleLabel?.font = UIFont(name: Constant.fontVerdana, size: 14)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 13, bottom: 0, right: 220)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 240)
         button.setTitleColor(.black, for: .normal)
-        button.addTarget(self, action: #selector(tapUserInfoButton), for: .touchUpInside)
         return button
     }()
 
     private let feedbackButton: UIButton = {
         let button = UIButton()
         button.setTitle(Constant.feedBack, for: .normal)
-        button.tintColor = .white
         button.setImage(UIImage(named: Constant.feedbackImage), for: .normal)
-        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 13, bottom: 0, right: -20)
+        button.titleLabel?.font = UIFont(name: Constant.fontVerdana, size: 14)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 13, bottom: 0, right: 220)
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 240)
         button.setTitleColor(.black, for: .normal)
-        button.addTarget(self, action: #selector(tapUserInfoButton), for: .touchUpInside)
         return button
     }()
 
@@ -121,8 +121,8 @@ final class ProfileViewController: UIViewController {
             titleLabel.heightAnchor.constraint(equalToConstant: 44),
 
             cardImageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 23),
-            cardImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
-            cardImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 8),
+            cardImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            cardImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             cardImageView.heightAnchor.constraint(equalToConstant: 180),
 
             userDataLabel.topAnchor.constraint(equalTo: cardImageView.bottomAnchor, constant: 20),
