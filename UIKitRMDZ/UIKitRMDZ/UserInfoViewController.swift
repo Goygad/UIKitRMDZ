@@ -12,6 +12,8 @@ private enum Constant {
     static let email = "Почта"
     static let save = "Сохранить"
     static let sizeLeg = "Размер ноги"
+    static let cancel = "Cancel"
+    static let done = "Done"
 }
 
 protocol UserInfoViewControllerDelegate: AnyObject {
@@ -167,9 +169,9 @@ final class UserInfoViewController: UIViewController {
         birthdayTextField.inputView = datePicker
         let screenWidth = UIScreen.main.bounds.width
         let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 40.0))
-        let cancel = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPressed))
+        let cancel = UIBarButtonItem(title: Constant.cancel, style: .plain, target: self, action: #selector(cancelPressed))
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let done = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donePressed))
+        let done = UIBarButtonItem(title: Constant.done, style: .plain, target: self, action: #selector(donePressed))
         toolBar.setItems([cancel, flexibleSpace, done], animated: false)
         birthdayTextField.inputAccessoryView = toolBar
     }
