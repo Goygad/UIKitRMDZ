@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52BC6BC82B7DE0CD00A99464 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC6BC72B7DE0CD00A99464 /* ShoppingCartViewController.swift */; };
+		52BC6BCA2B7DE0FB00A99464 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC6BC92B7DE0FB00A99464 /* ProfileViewController.swift */; };
+		52BC6BCC2B7DEF2400A99464 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC6BCB2B7DEF2400A99464 /* TabBarViewController.swift */; };
+		52C85FD72B7E705900B93FFB /* CatalogueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C85FD62B7E705900B93FFB /* CatalogueViewController.swift */; };
+		52C85FD92B7E94CF00B93FFB /* SizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C85FD82B7E94CF00B93FFB /* SizeViewController.swift */; };
 		52E7CB5E2B71475C0066B2F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7CB5D2B71475C0066B2F8 /* AppDelegate.swift */; };
 		52E7CB602B71475C0066B2F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7CB5F2B71475C0066B2F8 /* SceneDelegate.swift */; };
-		52E7CB622B71475C0066B2F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7CB612B71475C0066B2F8 /* ViewController.swift */; };
+		52E7CB622B71475C0066B2F8 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E7CB612B71475C0066B2F8 /* MainMenuViewController.swift */; };
 		52E7CB652B71475C0066B2F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E7CB632B71475C0066B2F8 /* Main.storyboard */; };
 		52E7CB672B71475F0066B2F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E7CB662B71475F0066B2F8 /* Assets.xcassets */; };
 		52E7CB6A2B71475F0066B2F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E7CB682B71475F0066B2F8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52BC6BC72B7DE0CD00A99464 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		52BC6BC92B7DE0FB00A99464 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		52BC6BCB2B7DEF2400A99464 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		52C85FD62B7E705900B93FFB /* CatalogueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueViewController.swift; sourceTree = "<group>"; };
+		52C85FD82B7E94CF00B93FFB /* SizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
 		52E7CB5A2B71475C0066B2F8 /* UIKitRMDZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitRMDZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E7CB5D2B71475C0066B2F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E7CB5F2B71475C0066B2F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52E7CB612B71475C0066B2F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52E7CB612B71475C0066B2F8 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		52E7CB642B71475C0066B2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52E7CB662B71475F0066B2F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E7CB692B71475F0066B2F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +47,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52BC6BC62B7DE09F00A99464 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52BC6BCB2B7DEF2400A99464 /* TabBarViewController.swift */,
+				52E7CB612B71475C0066B2F8 /* MainMenuViewController.swift */,
+				52C85FD62B7E705900B93FFB /* CatalogueViewController.swift */,
+				52BC6BC72B7DE0CD00A99464 /* ShoppingCartViewController.swift */,
+				52BC6BC92B7DE0FB00A99464 /* ProfileViewController.swift */,
+				52C85FD82B7E94CF00B93FFB /* SizeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		52E7CB512B71475C0066B2F8 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +79,9 @@
 		52E7CB5C2B71475C0066B2F8 /* UIKitRMDZ */ = {
 			isa = PBXGroup;
 			children = (
+				52BC6BC62B7DE09F00A99464 /* Controllers */,
 				52E7CB5D2B71475C0066B2F8 /* AppDelegate.swift */,
 				52E7CB5F2B71475C0066B2F8 /* SceneDelegate.swift */,
-				52E7CB612B71475C0066B2F8 /* ViewController.swift */,
 				52E7CB632B71475C0066B2F8 /* Main.storyboard */,
 				52E7CB662B71475F0066B2F8 /* Assets.xcassets */,
 				52E7CB682B71475F0066B2F8 /* LaunchScreen.storyboard */,
@@ -183,8 +206,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E7CB622B71475C0066B2F8 /* ViewController.swift in Sources */,
+				52BC6BC82B7DE0CD00A99464 /* ShoppingCartViewController.swift in Sources */,
+				52E7CB622B71475C0066B2F8 /* MainMenuViewController.swift in Sources */,
+				52BC6BCA2B7DE0FB00A99464 /* ProfileViewController.swift in Sources */,
 				52E7CB5E2B71475C0066B2F8 /* AppDelegate.swift in Sources */,
+				52BC6BCC2B7DEF2400A99464 /* TabBarViewController.swift in Sources */,
+				52C85FD92B7E94CF00B93FFB /* SizeViewController.swift in Sources */,
+				52C85FD72B7E705900B93FFB /* CatalogueViewController.swift in Sources */,
 				52E7CB602B71475C0066B2F8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
