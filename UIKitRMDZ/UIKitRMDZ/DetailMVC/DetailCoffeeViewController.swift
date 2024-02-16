@@ -133,12 +133,16 @@ final class DetailCoffeeViewController: UIViewController {
         configureBarButton()
     }
 
-    // MARK: - Private Methods
-
-    private func setupSubview() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         roastTypeViewController.textRoastTypeHandler = { [weak self] text in
             self?.roastTypeButton.titleLabel?.text = text
         }
+    }
+
+    // MARK: - Private Methods
+
+    private func setupSubview() {
         view.addSubviews(backgroundView, coffeeImageView, segmentedControl)
         view.addSubviews(roastTypeButton, ingredientButton, buyButton, priceLabel)
     }

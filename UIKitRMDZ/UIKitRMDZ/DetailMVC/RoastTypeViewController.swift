@@ -42,7 +42,7 @@ final class RoastTypeViewController: UIViewController {
             imageName: Constant.grainsImage,
             title: Constant.lightRoastType
         )
-        button.addTarget(self, action: #selector(tapTypeButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tapTypeButton(_:)), for: .touchUpInside)
         return button
     }()
 
@@ -56,7 +56,7 @@ final class RoastTypeViewController: UIViewController {
             imageName: Constant.lightRoastImage,
             title: Constant.darkRoastType
         )
-        button.addTarget(self, action: #selector(tapTypeButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tapTypeButton(_:)), for: .touchUpInside)
         return button
     }()
 
@@ -86,13 +86,12 @@ final class RoastTypeViewController: UIViewController {
         view.addSubviews(lightRoastTypeButton, darkRoastTypeButton, cancelButton, titleLabel)
     }
 
-    @objc private func tapTypeButton() {
-        if let text = lightRoastTypeButton.titleLabel?.text {
-            textRoastTypeHandler?(text)
+    @objc private func tapTypeButton(_ sender: UIButton) {
+        if sender == lightRoastTypeButton {
+            textRoastTypeHandler?((lightRoastTypeButton.titleLabel?.text!)!)
             dismiss(animated: true)
-        }
-        if let text = darkRoastTypeButton.titleLabel?.text {
-            textRoastTypeHandler?(text)
+        } else {
+            textRoastTypeHandler?((lightRoastTypeButton.titleLabel?.text!)!)
             dismiss(animated: true)
         }
     }
