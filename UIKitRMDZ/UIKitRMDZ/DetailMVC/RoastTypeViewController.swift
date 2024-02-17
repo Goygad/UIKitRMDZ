@@ -10,13 +10,18 @@ private enum Constant {
     static let coffeeColor = "AppCoffee"
     static let greyColor = "AppGrey"
     static let greenColor = "AppGreen"
-    static let grainsImage = "grains"
+    static let darkRoastImage = "dark_roast"
     static let lightRoastImage = "light_roast"
+    static let cancel = "cancel"
+}
+
+protocol RoastTypeViewControllerDelegate: AnyObject {
+    func modalViewControllerDidDismiss(roastType: String, roastImage: String)
 }
 
 /// RoastTypeViewController
 final class RoastTypeViewController: UIViewController {
-    var textRoastTypeHandler: ((String) -> Void)?
+    weak var delegate: RoastTypeViewControllerDelegate?
 
     // MARK: - Private Properties
 
@@ -39,7 +44,7 @@ final class RoastTypeViewController: UIViewController {
             width: 165,
             height: 165,
             background: Constant.greyColor,
-            imageName: Constant.grainsImage,
+            imageName: Constant.lightRoastImage,
             title: Constant.lightRoastType
         )
         button.addTarget(self, action: #selector(tapTypeButton(_:)), for: .touchUpInside)
@@ -53,7 +58,7 @@ final class RoastTypeViewController: UIViewController {
             width: 165,
             height: 165,
             background: Constant.greyColor,
-            imageName: Constant.lightRoastImage,
+            imageName: Constant.darkRoastImage,
             title: Constant.darkRoastType
         )
         button.addTarget(self, action: #selector(tapTypeButton(_:)), for: .touchUpInside)
@@ -67,7 +72,7 @@ final class RoastTypeViewController: UIViewController {
             width: 14,
             height: 14
         ))
-        button.setImage(UIImage(named: "cancel"), for: .normal)
+        button.setImage(UIImage(named: Constant.cancel), for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 18)
         button.addTarget(self, action: #selector(tapCancelButton), for: .touchUpInside)
         return button
@@ -88,10 +93,12 @@ final class RoastTypeViewController: UIViewController {
 
     @objc private func tapTypeButton(_ sender: UIButton) {
         if sender == lightRoastTypeButton {
-            textRoastTypeHandler?((lightRoastTypeButton.titleLabel?.text!)!)
+            guard let text = lightRoastTypeButton.titleLabel?.text else { return }
+            delegate?.modalViewControllerDidDismiss(roastType: text, roastImage: Constant.lightRoastImage)
             dismiss(animated: true)
         } else {
-            textRoastTypeHandler?((lightRoastTypeButton.titleLabel?.text!)!)
+            guard let text = darkRoastTypeButton.titleLabel?.text else { return }
+            delegate?.modalViewControllerDidDismiss(roastType: text, roastImage: Constant.darkRoastImage)
             dismiss(animated: true)
         }
     }

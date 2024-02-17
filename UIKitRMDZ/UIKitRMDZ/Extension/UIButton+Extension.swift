@@ -24,8 +24,8 @@ extension UIButton {
         ))
         backgroundColor = UIColor(named: background)
         setImage(UIImage(named: imageName), for: .normal)
-        titleEdgeInsets = UIEdgeInsets(top: -10, left: -75, bottom: -100, right: 20)
-        imageEdgeInsets = UIEdgeInsets(top: -80, left: 10, bottom: -50, right: -50)
+        titleEdgeInsets = UIEdgeInsets(top: -10, left: -80, bottom: -100, right: 20)
+        imageEdgeInsets = UIEdgeInsets(top: -80, left: 25, bottom: -50, right: -40)
         titleLabel?.textAlignment = .center
         setTitleColor(.black, for: .normal)
         setTitle(title, for: .normal)

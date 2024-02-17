@@ -12,7 +12,8 @@ private enum Constant {
     static let greenColor = "AppGreen"
     static let ingredient = "Дополнительные ингредиенты"
     static let ordered = "Заказать"
-    static let grainsImage = "grains"
+    static let darkRoastImage = "dark_roast"
+    static let lightRoastImage = "light_roast"
     static let plusImage = "plus"
     static let shareImage = "share"
     static let leftInset = 40
@@ -21,10 +22,9 @@ private enum Constant {
 final class DetailCoffeeViewController: UIViewController {
     // MARK: - Private Properties
 
-    private var roastTypeViewController = RoastTypeViewController()
-
-    private var segmentedControlItems: [String] = ["Американо", "Капучино", "Латте"]
-    private var segmentedControlImages = [
+    private let roastTypeViewController = RoastTypeViewController()
+    private let segmentedControlItems: [String] = ["Американо", "Капучино", "Латте"]
+    private let segmentedControlImages = [
         UIImage(named: "американо"),
         UIImage(named: "капучино"),
         UIImage(named: "латте")
@@ -75,7 +75,7 @@ final class DetailCoffeeViewController: UIViewController {
             width: 165,
             height: 165,
             background: Constant.greyColor,
-            imageName: Constant.grainsImage,
+            imageName: Constant.darkRoastImage,
             title: Constant.darkRoastType
         )
         button.addTarget(self, action: #selector(openRoastTypeViewController), for: .touchUpInside)
@@ -129,15 +129,9 @@ final class DetailCoffeeViewController: UIViewController {
 
     override func viewDidLoad() {
         view.backgroundColor = .white
+        roastTypeViewController.delegate = self
         setupSubview()
         configureBarButton()
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        roastTypeViewController.textRoastTypeHandler = { [weak self] text in
-            self?.roastTypeButton.titleLabel?.text = text
-        }
     }
 
     // MARK: - Private Methods
@@ -174,7 +168,7 @@ final class DetailCoffeeViewController: UIViewController {
     }
 
     @objc private func openRoastTypeViewController() {
-        present(RoastTypeViewController(), animated: true)
+        present(roastTypeViewController, animated: true)
     }
 
     @objc private func openGrainsViewController() {
@@ -183,5 +177,14 @@ final class DetailCoffeeViewController: UIViewController {
 
     @objc private func openOrderViewController() {
         present(OrderViewController(), animated: true)
+    }
+}
+
+// MARK: - Extension
+
+extension DetailCoffeeViewController: RoastTypeViewControllerDelegate {
+    func modalViewControllerDidDismiss(roastType: String, roastImage: String) {
+        roastTypeButton.setTitle(roastType, for: .normal)
+        roastTypeButton.setImage(UIImage(named: roastImage), for: .normal)
     }
 }
