@@ -3,7 +3,7 @@
 
 import UIKit
 
-class CatalogueViewController: UIViewController {
+final class CatalogueViewController: UIViewController {
     // MARK: - Constants
 
     private enum Constant {
@@ -14,6 +14,8 @@ class CatalogueViewController: UIViewController {
         static let white = "5750₽"
         static let shoes = "Обувь"
     }
+
+    private var shoesModel: [Shoes] = []
 
     // MARK: - Visual
 
@@ -130,14 +132,14 @@ class CatalogueViewController: UIViewController {
     private lazy var blackButton: UIButton = {
         let button = UIButton()
         button.setImage(.outCart, for: .normal)
-        button.addTarget(self, action: #selector(addToCart), for: .touchUpInside)
+        button.addTarget(self, action: #selector(addToCartOne), for: .touchUpInside)
         return button
     }()
 
     private lazy var blackShoesButton: UIButton = {
         let button = UIButton()
         button.setImage(.outCart, for: .normal)
-        button.addTarget(self, action: #selector(addToCart), for: .touchUpInside)
+        button.addTarget(self, action: #selector(addToCartTwo), for: .touchUpInside)
         return button
     }()
 
@@ -145,7 +147,7 @@ class CatalogueViewController: UIViewController {
         let button = UIButton()
         button.setImage(.outCart, for: .normal)
 
-        button.addTarget(self, action: #selector(addToCart), for: .touchUpInside)
+        button.addTarget(self, action: #selector(addToCartThree), for: .touchUpInside)
 
         return button
     }()
@@ -153,14 +155,14 @@ class CatalogueViewController: UIViewController {
     private lazy var yellowButton: UIButton = {
         let button = UIButton()
         button.setImage(.outCart, for: .normal)
-        button.addTarget(self, action: #selector(addToCart), for: .touchUpInside)
+        button.addTarget(self, action: #selector(addToCartFour), for: .touchUpInside)
         return button
     }()
 
     private lazy var whiteButton: UIButton = {
         let button = UIButton()
         button.setImage(.outCart, for: .normal)
-        button.addTarget(self, action: #selector(addToCart), for: .touchUpInside)
+        button.addTarget(self, action: #selector(addToCartFive), for: .touchUpInside)
         return button
     }()
 
@@ -395,9 +397,20 @@ class CatalogueViewController: UIViewController {
         whiteLabel.heightAnchor.constraint(equalToConstant: 12).isActive = true
     }
 
-    @objc private func addToCart(button: UIButton) {
+    @objc private func addToCartOne(button: UIButton) {
         button.setImage(.inCart, for: .normal)
         let sizeVC = SizeViewController()
+
+        shoesModel.append(.init(image: .womShoesBlack, price: Constant.black))
+        ShoesDataStorage.storage.save(model: shoesModel)
         present(UINavigationController(rootViewController: sizeVC), animated: true, completion: nil)
     }
+
+    @objc private func addToCartTwo(button: UIButton) {}
+
+    @objc private func addToCartThree(button: UIButton) {}
+
+    @objc private func addToCartFour(button: UIButton) {}
+
+    @objc private func addToCartFive() {}
 }

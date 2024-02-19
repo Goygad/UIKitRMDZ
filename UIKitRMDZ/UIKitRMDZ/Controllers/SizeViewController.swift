@@ -97,7 +97,6 @@ class SizeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewController()
-        print(size35Label.text)
     }
 
     // MARK: - Private methods
