@@ -2,7 +2,7 @@
 // Copyright © RoadMap. All rights reserved.
 
 import UIKit
-
+/// Главный экран магазина
 final class MainMenuViewController: UIViewController {
     // MARK: - Constants
 

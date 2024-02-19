@@ -2,7 +2,7 @@
 // Copyright © RoadMap. All rights reserved.
 
 import UIKit
-
+/// Экран настройки таб бара
 final class TabBarViewController: UITabBarController {
     // MARK: - Constants
 

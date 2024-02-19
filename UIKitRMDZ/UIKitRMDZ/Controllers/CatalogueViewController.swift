@@ -2,7 +2,7 @@
 // Copyright © RoadMap. All rights reserved.
 
 import UIKit
-
+/// Экран каталога обуви
 final class CatalogueViewController: UIViewController {
     // MARK: - Constants
 

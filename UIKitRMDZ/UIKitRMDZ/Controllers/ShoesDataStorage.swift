@@ -2,7 +2,7 @@
 // Copyright © RoadMap. All rights reserved.
 
 import Foundation
-
+/// Хранилище и обработка товаров попадающих в корзину 
 final class ShoesDataStorage {
     static let storage = ShoesDataStorage()
 

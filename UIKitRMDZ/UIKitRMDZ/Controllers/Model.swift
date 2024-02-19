@@ -3,7 +3,7 @@
 
 import Foundation
 import UIKit
-
+/// Модель данных поступающих в корзину 
 struct Shoes {
     var image: Image
     var price: String

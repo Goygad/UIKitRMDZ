@@ -2,7 +2,7 @@
 // Copyright © RoadMap. All rights reserved.
 
 import UIKit
-
+/// Экран всплывающего окна с выбором размера
 class SizeViewController: UIViewController {
     // MARK: - Constants
 

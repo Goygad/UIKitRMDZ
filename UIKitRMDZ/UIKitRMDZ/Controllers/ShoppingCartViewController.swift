@@ -2,7 +2,7 @@
 // Copyright © RoadMap. All rights reserved.
 
 import UIKit
-
+/// Экран с корзиной
 final class ShoppingCartViewController: UIViewController {
     // MARK: - Constants
 
