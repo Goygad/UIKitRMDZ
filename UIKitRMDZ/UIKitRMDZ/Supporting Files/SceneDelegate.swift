@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        let loginVC = DetailCoffeeViewController()
+        let loginVC = DetailViewController()
         window.rootViewController = loginVC
         window.makeKeyAndVisible()
     }

@@ -69,7 +69,7 @@ final class GrainsViewController: UIViewController {
 
     private func configureView() {
         for index in 1 ..< titles.count {
-            let grainsView = GrainsView(frame: CGRect(
+            var grainsView = GrainsView(frame: CGRect(
                 x: 0,
                 y: CGFloat(50 * index),
                 width: view.frame.width,

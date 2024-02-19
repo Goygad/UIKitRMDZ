@@ -7,7 +7,7 @@ import UIKit
 final class GrainsView: UIView {
     // MARK: - Public Properties
 
-    lazy var nameLabel: UILabel = {
+    let nameLabel: UILabel = {
         let label = UILabel(frame: CGRect(
             x: 20,
             y: 124,
@@ -22,8 +22,8 @@ final class GrainsView: UIView {
         let switcher = UISwitch(frame: CGRect(
             x: 305,
             y: 124,
-            width: 54,
-            height: 35
+            width: 0,
+            height: 0
         ))
         return switcher
     }()

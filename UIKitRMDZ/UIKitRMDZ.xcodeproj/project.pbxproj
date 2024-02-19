@@ -21,6 +21,7 @@
 		7BB53E3A2B7E102800A3C5E7 /* GratitudeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB53E392B7E102800A3C5E7 /* GratitudeViewController.swift */; };
 		7BB53E3E2B7E105900A3C5E7 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB53E3C2B7E105900A3C5E7 /* OrderViewController.swift */; };
 		7BB53E3F2B7E105900A3C5E7 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB53E3D2B7E105900A3C5E7 /* OrderModel.swift */; };
+		7BB53E672B83721700A3C5E7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB53E662B83721700A3C5E7 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		7BB53E392B7E102800A3C5E7 /* GratitudeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GratitudeViewController.swift; sourceTree = "<group>"; };
 		7BB53E3C2B7E105900A3C5E7 /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		7BB53E3D2B7E105900A3C5E7 /* OrderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		7BB53E662B83721700A3C5E7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				7BB53E2D2B7E0FE500A3C5E7 /* GrainsView.swift */,
 				7BB53E2E2B7E0FE500A3C5E7 /* RoastTypeViewController.swift */,
 				7BB53E2F2B7E0FE500A3C5E7 /* DetailCoffeeViewController.swift */,
+				7BB53E662B83721700A3C5E7 /* DetailViewController.swift */,
 			);
 			path = DetailMVC;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				7BB53E322B7E0FE500A3C5E7 /* RoastTypeViewController.swift in Sources */,
 				7BB53E312B7E0FE500A3C5E7 /* GrainsView.swift in Sources */,
 				7BB53E302B7E0FE500A3C5E7 /* GrainsViewController.swift in Sources */,
+				7BB53E672B83721700A3C5E7 /* DetailViewController.swift in Sources */,
 				7BB53E382B7E0FF400A3C5E7 /* UIView+Extension.swift in Sources */,
 				7BB53E3F2B7E105900A3C5E7 /* OrderModel.swift in Sources */,
 				7BB53E332B7E0FE500A3C5E7 /* DetailCoffeeViewController.swift in Sources */,
