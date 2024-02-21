@@ -150,7 +150,12 @@ final class UserInfoViewController: UIViewController {
         birthdayTextField.inputView = datePicker
         let screenWidth = UIScreen.main.bounds.width
         let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: screenWidth, height: 40.0))
-        let cancel = UIBarButtonItem(title: Constant.cancel, style: .plain, target: self, action: #selector(cancelPressed))
+        let cancel = UIBarButtonItem(
+            title: Constant.cancel,
+            style: .plain,
+            target: self,
+            action: #selector(cancelPressed)
+        )
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let done = UIBarButtonItem(title: Constant.done, style: .plain, target: self, action: #selector(donePressed))
         toolBar.setItems([cancel, flexibleSpace, done], animated: false)
@@ -219,10 +224,9 @@ final class UserInfoViewController: UIViewController {
     }
 }
 
-//MARK: - Extension UserInfoViewController
+// MARK: - Extension UserInfoViewController
 
 extension UserInfoViewController {
-
     func configure(model: UserInfoModel) {
         nameTextField.text = model.name
         surnameTextField.text = model.surname
