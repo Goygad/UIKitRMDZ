@@ -96,7 +96,7 @@ extension NewslineViewController: UITableViewDataSource {
         case .stories, .firstPost, .reccomend:
             return 1
         case .posts:
-            return rmLinkStorage.posts.count
+            return 6
         }
     }
 
