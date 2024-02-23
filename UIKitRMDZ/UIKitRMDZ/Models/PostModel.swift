@@ -4,12 +4,12 @@
 import Foundation
 
 struct PostModel {
-    ///картинка профиля
+    /// картинка профиля
     var profileImage: String
-    ///текст коментария
+    /// текст коментария
     var text: String
-    ///картинка публикации
+    /// картинка публикации
     var postImage: String
-    ///имеется ли кнопка
+    /// имеется ли кнопка
     var isButtonVisible: Bool
 }

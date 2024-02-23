@@ -46,7 +46,6 @@ final class NotificationsViewController: UIViewController {
             text: Constants.textCommentOne,
             postImage: Constants.oceanImage,
             isButtonVisible: true
-
         ),
         PostModel(
             profileImage: Constants.girl,

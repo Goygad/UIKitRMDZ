@@ -23,9 +23,9 @@ enum RMConstant {
 
 /// Хранилище наполнения новостной ленты
 struct RMLinkStorage {
-    ///сторис
+    /// сторис
     let stories = [RMConstant.myPlus, RMConstant.lavanda]
-    ///посты
+    /// посты
     let posts: [Post] = [.init(
         avatarImageName: RMConstant.caucasian,
         nameTitle: RMConstant.tour,
@@ -33,7 +33,7 @@ struct RMLinkStorage {
         likesCount: RMConstant.likes,
         descriptionPost: RMConstant.descriptionPost
     )]
-    ///рекомендации
+    /// рекомендации
     let recomended: [RecomendedAccaounts] = [.init(
         avatarImageName: [RMConstant.crimea, RMConstant.woman],
         nameAccount: [RMConstant.crimeaName, RMConstant.womanName]

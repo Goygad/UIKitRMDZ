@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5235E8CE2B8394860025C3A8 /* NewslineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8CD2B8394860025C3A8 /* NewslineViewController.swift */; };
 		5235E8D22B8396C40025C3A8 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8D12B8396C40025C3A8 /* NotificationsViewController.swift */; };
-		5235E8D42B8396D20025C3A8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8D32B8396D20025C3A8 /* ProfileViewController.swift */; };
 		5235E8D72B83D3300025C3A8 /* StoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8D62B83D3300025C3A8 /* StoriesCell.swift */; };
 		5235E8D92B83DC400025C3A8 /* NewPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8D82B83DC400025C3A8 /* NewPostCell.swift */; };
 		5235E8DB2B8475BE0025C3A8 /* RecomendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8DA2B8475BD0025C3A8 /* RecomendedCell.swift */; };
@@ -31,7 +30,6 @@
 /* Begin PBXFileReference section */
 		5235E8CD2B8394860025C3A8 /* NewslineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewslineViewController.swift; sourceTree = "<group>"; };
 		5235E8D12B8396C40025C3A8 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
-		5235E8D32B8396D20025C3A8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5235E8D62B83D3300025C3A8 /* StoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCell.swift; sourceTree = "<group>"; };
 		5235E8D82B83DC400025C3A8 /* NewPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostCell.swift; sourceTree = "<group>"; };
 		5235E8DA2B8475BD0025C3A8 /* RecomendedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendedCell.swift; sourceTree = "<group>"; };
@@ -69,7 +67,6 @@
 				52E7CB612B71475C0066B2F8 /* TabBarController.swift */,
 				5235E8CD2B8394860025C3A8 /* NewslineViewController.swift */,
 				5235E8D12B8396C40025C3A8 /* NotificationsViewController.swift */,
-				5235E8D32B8396D20025C3A8 /* ProfileViewController.swift */,
 				5235E8D02B8394AF0025C3A8 /* Supporting Files */,
 			);
 			path = Controllers;
@@ -255,7 +252,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B1BE5E2B85D79C00388F6B /* PictureCell.swift in Sources */,
-				5235E8D42B8396D20025C3A8 /* ProfileViewController.swift in Sources */,
 				52D359E22B878B9400D3C008 /* RecomendedAccaounts.swift in Sources */,
 				5235E8D22B8396C40025C3A8 /* NotificationsViewController.swift in Sources */,
 				52D359DC2B8632B900D3C008 /* PostModel.swift in Sources */,
