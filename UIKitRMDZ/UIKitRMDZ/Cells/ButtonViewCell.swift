@@ -9,6 +9,8 @@ final class ButtonViewCell: UITableViewCell {
 
     static let identifier = "ButtonViewCell"
 
+    // MARK: - Visual Components
+
     private let userImageView: UIImageView = {
         let imageView = UIImageView()
         return imageView

@@ -9,7 +9,7 @@ final class PictureCell: UITableViewCell {
 
     static let identifier = "PictureCell"
 
-    // MARK: - Private properties
+    // MARK: - Visual Components
 
     private let userImageView: UIImageView = {
         let imageView = UIImageView()

@@ -15,7 +15,7 @@ final class RecomendedCell: UITableViewCell {
 
     static let identifier = "RecomendedCell"
 
-    // MARK: - Private properties
+    // MARK: - Visual Components
 
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()

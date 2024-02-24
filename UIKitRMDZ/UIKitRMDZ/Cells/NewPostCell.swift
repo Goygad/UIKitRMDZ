@@ -14,7 +14,7 @@ final class NewPostCell: UITableViewCell {
 
     static let identifier = "NewPostCell"
 
-    // MARK: - Private properties
+    // MARK: - Visual Components
 
     private let imageViewPost = UIImageView()
     private let secImageViewPost = UIImageView()

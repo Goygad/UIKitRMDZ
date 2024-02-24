@@ -14,7 +14,7 @@ final class StoriesCell: UITableViewCell {
 
     static let identifier = "StoriesCell"
 
-    // MARK: - Private properties
+    // MARK: - Visual Components
 
     private let scrollView = UIScrollView()
     private let myStory = UIImageView()
