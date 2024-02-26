@@ -94,6 +94,10 @@ extension ProfileViewController: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.setUp(profileInfo: profileSet)
+            cell.linkButtonHandler = { [weak self] in
+                let controllerToMove = WebViewController()
+                self?.present(controllerToMove, animated: true)
+            }
             return cell
         case .actualStories:
             guard let cell = tableView.dequeueReusableCell(

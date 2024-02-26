@@ -13,9 +13,10 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         setupSceneDelegate(scene)
     }
+
     // MARK: - Private Methods
 
-   private func setupSceneDelegate(_ scene: UIScene) {
+    private func setupSceneDelegate(_ scene: UIScene) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let tabBarVC = TabBarController()
@@ -23,5 +24,4 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.rootViewController = tabBarVC
         window.makeKeyAndVisible()
     }
-
 }

@@ -97,12 +97,14 @@ final class ProfileCell: UITableViewCell {
 
     private let buttonSite: UIButton = {
         let button = UIButton()
-        button.setTitle("www.spacex.com", for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 10)
+        button.setTitle(" 📎 www.spacex.com", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Verdana", size: 10)
         button.setTitleColor(.blue, for: .normal)
         button.titleLabel?.textAlignment = .left
         return button
     }()
+
+    var linkButtonHandler: (() -> Void)?
 
     // MARK: - Life cycle
 
@@ -263,17 +265,14 @@ final class ProfileCell: UITableViewCell {
 
     private func makeButtonSiteConstraints() {
         buttonSite.translatesAutoresizingMaskIntoConstraints = false
-        buttonSite.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 5).isActive = true
+        buttonSite.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).isActive = true
         buttonSite.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 140).isActive = true
-        buttonSite.widthAnchor.constraint(equalToConstant: 130).isActive = true
+        buttonSite.widthAnchor.constraint(equalToConstant: 150).isActive = true
         buttonSite.heightAnchor.constraint(equalToConstant: 30).isActive = true
-
-        buttonSite.addTarget(self, action: #selector(siteButtonTapped), for: .touchUpInside)
+        buttonSite.addTarget(self, action: #selector(openLink), for: .touchUpInside)
     }
 
-    @objc private func siteButtonTapped() {
-        if let url = URL(string: "https://www.spacex.com/vehicles/starship/") {
-            UIApplication.shared.open(url)
-        }
+    @objc private func openLink() {
+        linkButtonHandler?()
     }
 }

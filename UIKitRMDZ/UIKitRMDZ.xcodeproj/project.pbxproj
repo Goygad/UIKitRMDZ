@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52073D8D2B8C81E000A1DA9C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52073D8C2B8C81E000A1DA9C /* WebViewController.swift */; };
 		5235E8CE2B8394860025C3A8 /* NewslineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8CD2B8394860025C3A8 /* NewslineViewController.swift */; };
 		5235E8D22B8396C40025C3A8 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8D12B8396C40025C3A8 /* NotificationsViewController.swift */; };
 		5235E8D72B83D3300025C3A8 /* StoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8D62B83D3300025C3A8 /* StoriesCell.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52073D8C2B8C81E000A1DA9C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5235E8CD2B8394860025C3A8 /* NewslineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewslineViewController.swift; sourceTree = "<group>"; };
 		5235E8D12B8396C40025C3A8 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		5235E8D62B83D3300025C3A8 /* StoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCell.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				5235E8D12B8396C40025C3A8 /* NotificationsViewController.swift */,
 				52B3E81B2B887D1600895378 /* ProfileViewController.swift */,
 				5235E8D02B8394AF0025C3A8 /* Supporting Files */,
+				52073D8C2B8C81E000A1DA9C /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B3E8222B887DDB00895378 /* PostTileCell.swift in Sources */,
+				52073D8D2B8C81E000A1DA9C /* WebViewController.swift in Sources */,
 				52B1BE5E2B85D79C00388F6B /* PictureCell.swift in Sources */,
 				52B3E81A2B887CD400895378 /* ProfileStorage.swift in Sources */,
 				52D359E22B878B9400D3C008 /* RecomendedAccaounts.swift in Sources */,
