@@ -5,14 +5,14 @@ import Foundation
 
 /// Наполнение поста
 struct Post {
-    ///картинка профиля
+    /// картинка профиля
     let avatarImageName: String
-    ///имя профиля
+    /// имя профиля
     let nameTitle: String
-    ///картинки в пикер вью
+    /// картинки в пикер вью
     let postImages: [String]
-    ///количество лайков
+    /// количество лайков
     let likesCount: String
-    ///описание под постом 
+    /// описание под постом
     let descriptionPost: String
 }

@@ -5,8 +5,8 @@ import Foundation
 
 /// Аккаунты в рекомендациях
 struct RecomendedAccaounts {
-    ///картинка профиля
+    /// картинка профиля
     let avatarImageName: [String]
-    ///имя профиля
+    /// имя профиля
     let nameAccount: [String]
 }

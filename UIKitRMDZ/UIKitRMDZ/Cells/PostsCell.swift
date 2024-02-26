@@ -9,7 +9,7 @@ final class PostsCell: UITableViewCell {
 
     static let identifier = "PostsCell"
 
-    // MARK: - Private properties
+    // MARK: - Visual Components
 
     private let avatarImageView: UIImageView = {
         let imageView = UIImageView()

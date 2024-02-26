@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52073D8D2B8C81E000A1DA9C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52073D8C2B8C81E000A1DA9C /* WebViewController.swift */; };
 		5235E8CE2B8394860025C3A8 /* NewslineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8CD2B8394860025C3A8 /* NewslineViewController.swift */; };
 		5235E8D22B8396C40025C3A8 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8D12B8396C40025C3A8 /* NotificationsViewController.swift */; };
-		5235E8D42B8396D20025C3A8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8D32B8396D20025C3A8 /* ProfileViewController.swift */; };
 		5235E8D72B83D3300025C3A8 /* StoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8D62B83D3300025C3A8 /* StoriesCell.swift */; };
 		5235E8D92B83DC400025C3A8 /* NewPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8D82B83DC400025C3A8 /* NewPostCell.swift */; };
 		5235E8DB2B8475BE0025C3A8 /* RecomendedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8DA2B8475BD0025C3A8 /* RecomendedCell.swift */; };
@@ -17,6 +17,12 @@
 		5235E8E32B850D1D0025C3A8 /* RMLinkStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5235E8E22B850D1D0025C3A8 /* RMLinkStorage.swift */; };
 		52B1BE5E2B85D79C00388F6B /* PictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1BE5D2B85D79C00388F6B /* PictureCell.swift */; };
 		52B1BE602B85D7AA00388F6B /* ButtonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1BE5F2B85D7AA00388F6B /* ButtonViewCell.swift */; };
+		52B3E8182B887CB600895378 /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B3E8172B887CB600895378 /* ProfileInfo.swift */; };
+		52B3E81A2B887CD400895378 /* ProfileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B3E8192B887CD400895378 /* ProfileStorage.swift */; };
+		52B3E81C2B887D1600895378 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B3E81B2B887D1600895378 /* ProfileViewController.swift */; };
+		52B3E81E2B887D7900895378 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B3E81D2B887D7900895378 /* ProfileCell.swift */; };
+		52B3E8202B887DBC00895378 /* ActualStoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B3E81F2B887DBC00895378 /* ActualStoriesCell.swift */; };
+		52B3E8222B887DDB00895378 /* PostTileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B3E8212B887DDB00895378 /* PostTileCell.swift */; };
 		52D359DC2B8632B900D3C008 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D359DB2B8632B900D3C008 /* PostModel.swift */; };
 		52D359E22B878B9400D3C008 /* RecomendedAccaounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D359E12B878B9400D3C008 /* RecomendedAccaounts.swift */; };
 		52D359E42B878BCC00D3C008 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D359E32B878BCC00D3C008 /* Post.swift */; };
@@ -29,9 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52073D8C2B8C81E000A1DA9C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		5235E8CD2B8394860025C3A8 /* NewslineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewslineViewController.swift; sourceTree = "<group>"; };
 		5235E8D12B8396C40025C3A8 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
-		5235E8D32B8396D20025C3A8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5235E8D62B83D3300025C3A8 /* StoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCell.swift; sourceTree = "<group>"; };
 		5235E8D82B83DC400025C3A8 /* NewPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostCell.swift; sourceTree = "<group>"; };
 		5235E8DA2B8475BD0025C3A8 /* RecomendedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendedCell.swift; sourceTree = "<group>"; };
@@ -39,6 +45,12 @@
 		5235E8E22B850D1D0025C3A8 /* RMLinkStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMLinkStorage.swift; sourceTree = "<group>"; };
 		52B1BE5D2B85D79C00388F6B /* PictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCell.swift; sourceTree = "<group>"; };
 		52B1BE5F2B85D7AA00388F6B /* ButtonViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewCell.swift; sourceTree = "<group>"; };
+		52B3E8172B887CB600895378 /* ProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfo.swift; sourceTree = "<group>"; };
+		52B3E8192B887CD400895378 /* ProfileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStorage.swift; sourceTree = "<group>"; };
+		52B3E81B2B887D1600895378 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		52B3E81D2B887D7900895378 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		52B3E81F2B887DBC00895378 /* ActualStoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualStoriesCell.swift; sourceTree = "<group>"; };
+		52B3E8212B887DDB00895378 /* PostTileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTileCell.swift; sourceTree = "<group>"; };
 		52D359DB2B8632B900D3C008 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		52D359E12B878B9400D3C008 /* RecomendedAccaounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendedAccaounts.swift; sourceTree = "<group>"; };
 		52D359E32B878BCC00D3C008 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -69,8 +81,9 @@
 				52E7CB612B71475C0066B2F8 /* TabBarController.swift */,
 				5235E8CD2B8394860025C3A8 /* NewslineViewController.swift */,
 				5235E8D12B8396C40025C3A8 /* NotificationsViewController.swift */,
-				5235E8D32B8396D20025C3A8 /* ProfileViewController.swift */,
+				52B3E81B2B887D1600895378 /* ProfileViewController.swift */,
 				5235E8D02B8394AF0025C3A8 /* Supporting Files */,
+				52073D8C2B8C81E000A1DA9C /* WebViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -93,6 +106,9 @@
 				5235E8DC2B8475CE0025C3A8 /* PostsCell.swift */,
 				52B1BE5D2B85D79C00388F6B /* PictureCell.swift */,
 				52B1BE5F2B85D7AA00388F6B /* ButtonViewCell.swift */,
+				52B3E81D2B887D7900895378 /* ProfileCell.swift */,
+				52B3E81F2B887DBC00895378 /* ActualStoriesCell.swift */,
+				52B3E8212B887DDB00895378 /* PostTileCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -104,6 +120,8 @@
 				52D359DB2B8632B900D3C008 /* PostModel.swift */,
 				52D359E12B878B9400D3C008 /* RecomendedAccaounts.swift */,
 				52D359E32B878BCC00D3C008 /* Post.swift */,
+				52B3E8172B887CB600895378 /* ProfileInfo.swift */,
+				52B3E8192B887CD400895378 /* ProfileStorage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,16 +272,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B3E8222B887DDB00895378 /* PostTileCell.swift in Sources */,
+				52073D8D2B8C81E000A1DA9C /* WebViewController.swift in Sources */,
 				52B1BE5E2B85D79C00388F6B /* PictureCell.swift in Sources */,
-				5235E8D42B8396D20025C3A8 /* ProfileViewController.swift in Sources */,
+				52B3E81A2B887CD400895378 /* ProfileStorage.swift in Sources */,
 				52D359E22B878B9400D3C008 /* RecomendedAccaounts.swift in Sources */,
 				5235E8D22B8396C40025C3A8 /* NotificationsViewController.swift in Sources */,
 				52D359DC2B8632B900D3C008 /* PostModel.swift in Sources */,
+				52B3E8202B887DBC00895378 /* ActualStoriesCell.swift in Sources */,
 				5235E8D72B83D3300025C3A8 /* StoriesCell.swift in Sources */,
+				52B3E81C2B887D1600895378 /* ProfileViewController.swift in Sources */,
 				52E7CB622B71475C0066B2F8 /* TabBarController.swift in Sources */,
 				5235E8DD2B8475CE0025C3A8 /* PostsCell.swift in Sources */,
 				5235E8D92B83DC400025C3A8 /* NewPostCell.swift in Sources */,
 				52E7CB5E2B71475C0066B2F8 /* AppDelegate.swift in Sources */,
+				52B3E8182B887CB600895378 /* ProfileInfo.swift in Sources */,
+				52B3E81E2B887D7900895378 /* ProfileCell.swift in Sources */,
 				5235E8E32B850D1D0025C3A8 /* RMLinkStorage.swift in Sources */,
 				52E7CB602B71475C0066B2F8 /* SceneDelegate.swift in Sources */,
 				5235E8CE2B8394860025C3A8 /* NewslineViewController.swift in Sources */,
