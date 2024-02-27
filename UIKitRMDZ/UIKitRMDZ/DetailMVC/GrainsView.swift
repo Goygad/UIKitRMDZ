@@ -18,7 +18,7 @@ final class GrainsView: UIView {
         return label
     }()
 
-    lazy var switcher: UISwitch = {
+    var switcher: UISwitch = {
         let switcher = UISwitch(frame: CGRect(
             x: 305,
             y: 124,
